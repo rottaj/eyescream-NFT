@@ -22,6 +22,12 @@ function App() {
         <div className="collection-preview">
           <img src={EyeScreamPreview}></img>
         </div>
+
+        <div className="about">
+          Eyescream is a community project that brings crypto enthusiasts together.
+          Each token serves as a membership pass to the community... granting members access to
+          an exclusive club where they create, learn, and change the world.
+        </div>
       </div>
       </div>
   );

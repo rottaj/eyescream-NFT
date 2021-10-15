@@ -1,5 +1,6 @@
 import React from 'react';
-import EyeScreamPreview from "./images/eyescreamscoop.jpg"
+import EyeScreamPreview from "./images/eyescreamscoop.jpg";
+import SprinklesBackground from "./images/sprinkles.png";
 import './App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,14 +15,7 @@ function App() {
       <div className="connect-wallet">
         <button className="wallet-button">Connect Wallet</button>
       </div>
-      <div className="about-side-panel">
-        Eyescream Project is a collection of 10,000 NFT's living on the Ethereum 
-        Blockchain. <br></br><br></br><br></br>
 
-        Eyescream has 100 unique attributes. <br></br><br></br><br></br><br></br>
-
-        Each Eyescream is one of a kind.
-      </div>
       <div className="App">
         <header className="App-header">The Eyescream Project</header>
 
@@ -34,6 +28,7 @@ function App() {
           Each token serves as a membership pass to the community... granting members access to
           an exclusive club where they create, learn, and change the world.
         </div>
+        <h1 className="collection-header">The Inside Scoop</h1>
         <div>
           <Swiper
             className="swiper-container"
@@ -61,6 +56,15 @@ function App() {
           <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
           </Swiper>
         </div>
+
+      <div className="about-side-panel">
+        Eyescream Project is a collection of 10,000 NFT's living on the Ethereum 
+        Blockchain. <br></br><br></br><br></br>
+
+        Eyescream has 100 unique attributes. <br></br><br></br><br></br><br></br>
+
+        Each Eyescream is one of a kind.
+      </div>
       </div>
       </div>
   );

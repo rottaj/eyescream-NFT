@@ -61,7 +61,8 @@
 
 .about {
   margin-top: 3%;
-
+  max-width: 75%;
+  margin-left: 13%;
   /*margin-left: 20%;*/
   position: relative;
   align-items: center;

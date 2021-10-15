@@ -29,9 +29,17 @@ function App() {
         </div>
 
         <div className="about">
-          Eyescream is a community project that brings crypto enthusiasts together.
-          Each token serves as a membership pass to the community... granting members access to
+          Eyescream is a platform for collaborative creativity. Bringing crypto enthusiasts together.
+          Each token serves as a membership to our community... granting members access to
           an exclusive club where they create, learn, and change the world.
+          <br></br><br></br>
+          We're building a community to benefit the planet, and all of it's beautiful eyescream
+          lovers.
+          <br></br><br></br>
+          Building people; by bringing them together. Creating strong, like minded contributors
+          to our planet.
+          <br></br><br></br>
+          And of course, having the best time we can while doing it. We like to party and we know you do too! 
         </div>
         <h1 className="collection-header">The Inside Scoop</h1>
         <div>
@@ -78,23 +86,23 @@ function App() {
             <img src={EyeScreamPreview}></img>
 
             <h3>Creme Dev</h3>
-            <p>Jack is a 21 year old full time software engineer who lives in 
-              Manhattan NYC. 
+            <p>Jack is a 21 year old full time software engineer living Hoboken, NJ. 
+              Web3 enthusiast, w/ deep understanding of cryptocurreny and blockchain.
             </p>
           </div>
           <div className="member-boy">
             <img src={EyeScreamPreview}></img>
             <h3>Pie Boy</h3>
             <p>
-              Peter is a 22 year old certified hood classic.
+              Peter is a 22 year financial analyst living in Manhattan, NYC.
               Enjoys long walks on the beach and listening to The Beatles.
             </p>
           </div>
           <div className="member-artist">
             <img src={EyeScreamPreview}></img>
             <h3>Baby Artist</h3>
-            <p>Eli is a 22 year old artist based in Manhattan. He has started numerous
-              clothing companies. 
+            <p>Eli is a 22 year old artist based in Manhattan, NYC. He has started numerous
+              clothing companies based around his art.
             </p>
           </div>
         </div>

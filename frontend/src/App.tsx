@@ -62,18 +62,34 @@ function App() {
           </Swiper>
         </div>
 
-      <div className="about-side-panel">
-        <p className="p1-about">Eyescream Project is a collection of 10,101 NFT's living on the Ethereum 
-        Blockchain. </p>
-        <br></br><br></br><br></br>
+        <div className="road-map-and-info">
+          <p className="p1-about">Eyescream Project is a collection of 10,101 NFT's living on the Ethereum 
+          Blockchain. </p>
+          <br></br><br></br><br></br>
 
-        <p className="p2-about">Eyescream has 100 unique attributes. </p>
-        <br></br><br></br><br></br>
+          <p className="p2-about">Eyescream has 100 unique attributes. </p>
+          <br></br><br></br><br></br>
 
-        <p className="p3-about">Each Eyescream is one of a kind.</p>
+          <p className="p3-about">Each Eyescream is one of a kind.</p>
+        </div>
+        <h1 className="team-header">Meet the team</h1>
+        <div className="team-members">
+          <div className="member-dev">
+            <img src={EyeScreamPreview}></img>
+
+            <h3>Creme Dev</h3>
+          </div>
+          <div className="member-boy">
+            <img src={EyeScreamPreview}></img>
+            <h3>Pie Boy</h3>
+          </div>
+          <div className="member-artist">
+            <img src={EyeScreamPreview}></img>
+            <h3>Baby Artist</h3>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   );
 }
 

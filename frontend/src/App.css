@@ -95,7 +95,7 @@
   color: rgb(252, 186, 3)
 }
 
-.about-side-panel {
+.road-map-and-info {
   margin-top: 10%;
   font-size: calc(10px + 2vmin);
   /*margin-right: 5%; */
@@ -116,4 +116,39 @@
 .p3-about {
   width: 10%;
   margin-left: 25%;
+}
+
+.team-header {
+  margin-top: 5%;
+  text-shadow: 3px 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(50px + 2vmin);
+  color: white;
+}
+
+.team-members {
+  display: inline-block;
+  max-height: 25%;
+  width: 100%;
+}
+
+.member-dev{
+  display: inline-block;
+  height: 50vh;
+  max-width: 50vh;
+}
+.member-boy{
+  display: inline-block;
+  height: 50vh;
+  margin-left: 6%;
+  margin-right: 6%;
+  max-width: 50vh;
+}
+.member-artist{
+  display: inline-block;
+  height: 50vh;
+  max-width: 50vh;
 }

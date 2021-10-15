@@ -71,14 +71,16 @@ function App() {
         </div>
 
         <div className="road-map-and-info">
-          <p className="p1-about">Eyescream Project is a collection of 10,101 NFT's living on the Ethereum 
+          <p className="p1-about">Eyescream is a collection of 10,101 NFT's living on the Ethereum 
           Blockchain. </p>
-          <br></br><br></br><br></br>
 
           <p className="p2-about">Eyescream has 100 unique attributes. </p>
-          <br></br><br></br><br></br>
 
           <p className="p3-about">Each Eyescream is one of a kind.</p>
+
+          <p className="p4-about">Donating to charity!</p>
+          <p className="p5-about"> NYC parties! Night clubs and more!</p>
+          <p className="p6-about"> All money earned will be reinstated to the project. </p>
         </div>
         <h1 className="team-header">Meet the team</h1>
         <div className="team-members">
@@ -86,8 +88,8 @@ function App() {
             <img src={EyeScreamPreview}></img>
 
             <h3>Creme Dev</h3>
-            <p>Jack is a 21 year old full time software engineer living Hoboken, NJ. 
-              Web3 enthusiast, w/ deep understanding of cryptocurreny and blockchain.
+            <p>Jack is a 21 year old full time software engineer living in Hoboken, NJ. 
+              Web3 enthusiast, w/ deep understanding of cryptocurrency and blockchain.
             </p>
           </div>
           <div className="member-boy">
@@ -102,7 +104,7 @@ function App() {
             <img src={EyeScreamPreview}></img>
             <h3>Baby Artist</h3>
             <p>Eli is a 22 year old artist based in Manhattan, NYC. He has started numerous
-              clothing companies based around his art.
+              clothing companies based around his art work.
             </p>
           </div>
         </div>

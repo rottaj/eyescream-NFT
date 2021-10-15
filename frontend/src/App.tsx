@@ -78,14 +78,24 @@ function App() {
             <img src={EyeScreamPreview}></img>
 
             <h3>Creme Dev</h3>
+            <p>Jack is a 21 year old full time software engineer who lives in 
+              Manhattan NYC. 
+            </p>
           </div>
           <div className="member-boy">
             <img src={EyeScreamPreview}></img>
             <h3>Pie Boy</h3>
+            <p>
+              Peter is a 22 year old certified hood classic.
+              Enjoys long walks on the beach and listening to The Beatles.
+            </p>
           </div>
           <div className="member-artist">
             <img src={EyeScreamPreview}></img>
             <h3>Baby Artist</h3>
+            <p>Eli is a 22 year old artist based in Manhattan. He has started numerous
+              clothing companies. 
+            </p>
           </div>
         </div>
       </div>

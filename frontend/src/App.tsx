@@ -1,6 +1,12 @@
 import React from 'react';
 import EyeScreamPreview from "./images/eyescreamscoop.jpg"
 import './App.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+
 
 function App() {
   return (
@@ -27,6 +33,32 @@ function App() {
           Eyescream is a community project that brings crypto enthusiasts together.
           Each token serves as a membership pass to the community... granting members access to
           an exclusive club where they create, learn, and change the world.
+        </div>
+        <div>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={6}
+            centeredSlides
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={swiper => console.log(swiper)}
+          >
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+          </Swiper>
         </div>
       </div>
       </div>

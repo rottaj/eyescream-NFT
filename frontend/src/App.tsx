@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="body">
       <div className="social-navbar-top">
-        <a href="#" className="fab fa-twitter fa-2x"></a>
+        <a href="https://twitter.com/eyescreamnft" className="fab fa-twitter fa-2x"></a>
         <a href="#" className="fab fa-instagram fa-2x"></a>
-        <a href="#" className="fab fa-discord fa-2x"></a>
+        <a href="https://discord.gg/RJA9a5Zg" className="fab fa-discord fa-2x"></a>
       </div>
       <div className="connect-wallet">
         <button className="wallet-button">Connect Wallet</button>
@@ -82,7 +82,7 @@ function App() {
           <p className="p5-about"> NYC parties! Night clubs and more!</p>
           <p className="p6-about"> All money earned will be reinstated to the project. </p>
         </div>
-        <h1 className="team-header">Meet the team</h1>
+        <h1 className="team-header">Meet the flavors</h1>
         <div className="team-members">
           <div className="member-dev">
             <img src={EyeScreamPreview}></img>

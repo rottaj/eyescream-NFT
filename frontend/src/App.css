@@ -15,6 +15,14 @@
   border: 2px solid white;
 }
 
+.social-navbar-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  max-width: 10%;
+}
+
+
 
 .connect-wallet {
   margin-top: 2.5%;

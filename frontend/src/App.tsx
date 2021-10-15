@@ -12,6 +12,11 @@ import "swiper/swiper.min.css";
 function App() {
   return (
     <div className="body">
+      <div className="social-navbar-top">
+        <a href="#" className="fab fa-twitter fa-2x"></a>
+        <a href="#" className="fab fa-instagram fa-2x"></a>
+        <a href="#" className="fab fa-discord fa-2x"></a>
+      </div>
       <div className="connect-wallet">
         <button className="wallet-button">Connect Wallet</button>
       </div>
@@ -58,7 +63,7 @@ function App() {
         </div>
 
       <div className="about-side-panel">
-        <p className="p1-about">Eyescream Project is a collection of 10,000 NFT's living on the Ethereum 
+        <p className="p1-about">Eyescream Project is a collection of 10,101 NFT's living on the Ethereum 
         Blockchain. </p>
         <br></br><br></br><br></br>
 

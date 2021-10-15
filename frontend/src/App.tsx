@@ -58,12 +58,14 @@ function App() {
         </div>
 
       <div className="about-side-panel">
-        Eyescream Project is a collection of 10,000 NFT's living on the Ethereum 
-        Blockchain. <br></br><br></br><br></br>
+        <p className="p1-about">Eyescream Project is a collection of 10,000 NFT's living on the Ethereum 
+        Blockchain. </p>
+        <br></br><br></br><br></br>
 
-        Eyescream has 100 unique attributes. <br></br><br></br><br></br><br></br>
+        <p className="p2-about">Eyescream has 100 unique attributes. </p>
+        <br></br><br></br><br></br>
 
-        Each Eyescream is one of a kind.
+        <p className="p3-about">Each Eyescream is one of a kind.</p>
       </div>
       </div>
       </div>

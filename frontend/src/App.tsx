@@ -36,8 +36,9 @@ function App() {
         </div>
         <div>
           <Swiper
-            spaceBetween={30}
-            slidesPerView={6}
+            className="swiper-container"
+            spaceBetween={200}
+            slidesPerView={4}
             centeredSlides
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}

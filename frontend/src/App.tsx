@@ -1,6 +1,7 @@
 import React from 'react';
 import EyeScreamPreview from "./images/eyescreamscoop.jpg";
 import SprinklesBackground from "./images/sprinkles.png";
+import Roadmap from "./images/roadmap.jpg"
 import './App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -71,16 +72,19 @@ function App() {
         </div>
 
         <div className="road-map-and-info">
+          <img src={Roadmap}></img>
+          {/*
           <p className="p1-about">Eyescream is a collection of 10,101 NFT's living on the Ethereum 
           Blockchain. </p>
 
-          <p className="p2-about">Eyescream has 100 unique attributes. </p>
+          <p className="p2-about">Eyescream has 101 unique attributes. </p>
 
           <p className="p3-about">Each Eyescream is one of a kind.</p>
 
           <p className="p4-about">Donating to charity!</p>
-          <p className="p5-about"> NYC parties! Night clubs and more!</p>
+          <p className="p5-about"> NYC parties! Night clubs, venues, and concerts!</p>
           <p className="p6-about"> All money earned will be reinstated to the project. </p>
+          */}
         </div>
         <h1 className="team-header">Meet the flavors</h1>
         <div className="team-members">

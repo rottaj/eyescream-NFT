@@ -172,6 +172,14 @@
   height: 50vh;
   max-width: 50vh;
 }
+.member-dev-2{
+  display: inline-block;
+  height: 50vh;
+  margin-left: 6%;
+  margin-right: 6%;
+  max-width: 50vh;
+}
+
 .member-boy{
   display: inline-block;
   height: 50vh;

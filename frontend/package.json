@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage": "https://eyescream.io/",
+  "homepage": "https://eyescream.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

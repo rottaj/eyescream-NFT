@@ -96,6 +96,14 @@ function App() {
               Web3 enthusiast, w/ deep understanding of cryptocurrency and blockchain.
             </p>
           </div>
+          <div className="member-dev">
+            <img src={EyeScreamPreview}></img>
+
+            <h3>Creme Dev</h3>
+            <p>Ariq is a 21 year old full time software engineer living in Houston, TX. 
+              Web3 enthusiast, w/ deep understanding of cryptocurrency and blockchain.
+            </p>
+          </div>
           <div className="member-boy">
             <img src={EyeScreamPreview}></img>
             <h3>Pie Boy</h3>

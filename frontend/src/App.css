@@ -7,6 +7,7 @@
 
 .body {
   background-image: url("./images/sprinkles.png");
+  /*1background-image: url("./images/DripBackground.jpg"); */
   /*background-image: url("./images/dotted-img.jpeg"); */
 }
 
@@ -120,6 +121,62 @@ img {
   */
 }
 
+.mint-panel {
+  margin-top: 15%;
+  height: 25%;
+}
+
+.mint-header {
+  font-size: calc(50px + 2vmin);
+  font-family: retro-font;
+}
+
+.mint-card {
+  border-style: solid;
+  min-height: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+}
+
+.mint-img {
+  height: 30%;
+  width: 30%;
+  flex-direction: row;
+}
+
+.mint-card-title {
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+}
+
+.mint-card-eyescream-info {
+  margin-top: 7%;
+  margin-left: 25%;
+}
+
+.mint-card-eyescream {
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  align-items: stretch;
+}
+
+.mint-card-button-buy {
+  width: 100%;
+  margin-top: 2%;
+  min-height: 5vh;
+}
+
+.mint-form-token-amount {
+  width: 100%;
+  min-height: 5vh;
+  padding-left: -5%;
+}
 
 .team-header {
   font-family: retro-font;
@@ -130,7 +187,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: calc(50px + 2vmin);
-  color: white;
+  color: rgb(3, 252, 177);
 }
 
 .team-members {

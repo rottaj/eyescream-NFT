@@ -1,7 +1,9 @@
 import React from 'react';
 import EyeScreamPreview from "./images/eyescreamscoop.jpg";
 import SprinklesBackground from "./images/sprinkles.png";
+import DripBackground from "./images/DripBackground.jpg"
 import Roadmap from "./images/roadmap.jpg"
+import MintCard from "./Components/MintCard"
 import './App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,7 +18,7 @@ function App() {
       <div className="social-navbar-top">
         <a href="https://twitter.com/eyescreamnft" className="fab fa-twitter fa-2x"></a>
         <a href="#" className="fab fa-instagram fa-2x"></a>
-        <a href="https://discord.gg/RJA9a5Zg" className="fab fa-discord fa-2x"></a>
+        <a href="https://discord.gg/AS79UbJCfV" className="fab fa-discord fa-2x"></a>
       </div>
       <div className="connect-wallet">
         <button className="wallet-button">Connect Wallet</button>
@@ -74,6 +76,10 @@ function App() {
         <div className="road-map-and-info">
           <img src={Roadmap}></img>
 
+        </div>
+        <div className="mint-panel">
+          <h1 className="mint-header">Join Eyescream!</h1>
+          <MintCard/>     
         </div>
         <h1 className="team-header">Meet the flavors</h1>
         <div className="team-members">

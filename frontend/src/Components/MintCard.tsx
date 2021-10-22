@@ -11,14 +11,22 @@ export default function MintCard() {
                 <img src={EyeScreamPreview} className="mint-img"></img>
                 <div className="mint-card-eyescream-info">
                     <h3 className="current-price-h3">Current Price</h3>
-                    <h1>0.03 ETH Each</h1>
+                    <h1>0.08 ETH Each</h1>
                     <h3>10,101/10,101 remain</h3>
                 </div>
             </div>
+
             <form className="mint-form">
-                <input className="mint-form-token-amount" type="text" id="token-amount" name="token-amount" value="1"/>
+                <input className="mint-form-token-amount" type="text" id="token-amount" name="token-amount" value="1" placeholder="Enter number of Eyescreams you want."/>
             </form>
+            <hr></hr>
+            <div className="mint-card-total">
+                <h3 className="total-h3">Total</h3>
+                <h1 className="mint-card-total-price-h1">0.08 ETH</h1>
+            </div>
+            <hr></hr>
             <button className="mint-card-button-buy">Buy now!</button>
+
         </div>
     )
 }

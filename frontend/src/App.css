@@ -178,6 +178,18 @@ img {
   padding-left: -5%;
 }
 
+.mint-card-total {
+  display: flex;
+  flex-direction:center;
+  align-items: stretch;
+}
+.total-h3 {
+  margin-top: 5%;
+}
+.mint-card-total-price-h1 {
+  margin-left: 60%;
+}
+
 .team-header {
   font-family: retro-font;
   margin-top: 5%;

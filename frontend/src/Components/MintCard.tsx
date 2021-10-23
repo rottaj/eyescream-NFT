@@ -9,11 +9,9 @@ import EyeScreamPreview from "../images/eyescreamscoop.jpg";
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e)
         let tokenNum = parseInt(e.target.value) || 0;
         if (tokenNum > 5) { tokenNum = 5 }
         let amount = tokenNum * 0.08 
-        //let amount = parseInt(e.target.value) * 0.08;
         this.setState({
             coins: tokenNum,
             amountEth: amount

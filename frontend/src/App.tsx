@@ -32,9 +32,9 @@ function App() {
         </div>
 
         <div className="about">
-          Eyescream is a platform for collaborative creativity. Bringing crypto enthusiasts together.
-          Each token serves as a membership to our community... granting members access to
-          an exclusive club where they create, learn, party, and change the world.
+          Eyescream is a platform for collaborative creativity. Each token serves as a membership to our community... 
+          granting members access to an exclusive club where they 
+          create, party, and change the world.
           <br></br><br></br>
           We're building a community to benefit the planet, and all of it's beautiful eyescream
           lovers.

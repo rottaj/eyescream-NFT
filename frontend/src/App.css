@@ -11,6 +11,10 @@
   /*background-image: url("./images/dotted-img.jpeg"); */
 }
 
+.body2 {
+  background-image: url("./images/DripBackground.jpg")
+}
+
 .App {
   height: 100%;
   margin-left: 10%;
@@ -134,6 +138,7 @@ img {
 .mint-card {
   border-style: solid;
   min-height: 100%;
+  min-width: 25%;
   margin-left: 25%;
   margin-right: 25%;
   padding-bottom: 2%;

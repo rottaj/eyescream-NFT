@@ -12,9 +12,14 @@ interface State {
     expired: boolean
 }
 
-class CountDown extends React.Component<Props, State> {
-    constructor(props: Props, countDown: any) {
+interface Interval {
+    interval: any
+}
+
+class CountDown extends React.Component<Props, State, Interval> {
+    constructor(props: Props, interval: any) {
         super(props)
+        //this.interval = null
     }
     state: State = {
         days: 0,
@@ -25,6 +30,7 @@ class CountDown extends React.Component<Props, State> {
     }
 
     componentDidMount() {
+        //this.interval = setInterval(this.initializeTimer, 1000);
         setInterval(this.initializeTimer, 1000);
     }
 
@@ -46,6 +52,7 @@ class CountDown extends React.Component<Props, State> {
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         if (distance < 0) {
              // add function to stop interval here.
+            //clearInterval(this.interval)
             this.setState({expired: true})
         }
         this.setState({days, hours, minutes, seconds, expired: false})

@@ -119,12 +119,14 @@
 .count-down-panel {
   width: 100%;
   margin-top: 5%;
-  display: inline-block;
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
 .count-down-panel-days {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-style: solid;
   width: 12%;
   min-height: 12vh;

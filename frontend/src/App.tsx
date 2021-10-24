@@ -119,6 +119,11 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="social-navbar-bottom">
+        <a href="https://twitter.com/eyescreamnft" className="fab fa-twitter fa-2x"></a>
+        <a href="#" className="fab fa-instagram fa-2x"></a>
+        <a href="https://discord.gg/AS79UbJCfV" className="fab fa-discord fa-2x"></a>
+      </div>
     </div>
   );
 }

@@ -77,6 +77,7 @@ function App() {
           <img className="roadmap-img"src={Roadmap}></img>
 
         </div>
+        <h1 className="count-down-timer-h1">Countdown</h1>
         <CountDown/>
         <div className="mint-panel">
           <h1 className="mint-header">Join Eyescream!</h1>

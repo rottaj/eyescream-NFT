@@ -10,6 +10,9 @@ class CountDown extends React.Component {
                 <div className="count-down-panel-hours">
 
                 </div>
+                <div className="count-down-panel-minutes">
+
+                </div>
                 <div className="count-down-panel-seconds">
 
                 </div>

@@ -74,7 +74,7 @@ function App() {
           </Swiper>
         </div>
         <div className="road-map-and-info">
-          <img src={Roadmap}></img>
+          <img className="roadmap-img"src={Roadmap}></img>
 
         </div>
         <CountDown/>

@@ -30,7 +30,7 @@
 .social-navbar-top {
   display: flex;
   justify-content: space-between;
-  margin-top: 5%;
+  padding-top: 5%;
   max-width: 10%;
 }
 
@@ -38,7 +38,7 @@
 
 .connect-wallet {
   margin-top: 2.5%;
-  margin-right: 5%;
+  padding-right: 9.9%;
   text-align: right;
 }
 
@@ -334,5 +334,10 @@
   max-width: 50vh;
 }
 
+.social-navbar-bottom{
+  text-align: center;
+  margin-top: 3%;
+  padding-bottom: 2%;
+}
 
 /* ----------- End of team panel ------------ */

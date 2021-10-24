@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
+var startTime = 1635654241699;
 
 function App() {
   return (
@@ -78,7 +79,7 @@ function App() {
 
         </div>
         <h1 className="count-down-timer-h1">Countdown</h1>
-        <CountDown/>
+        <CountDown startTime={startTime}/>
         <div className="mint-panel">
           <h1 className="mint-header">Join Eyescream!</h1>
           <MintCard/>     

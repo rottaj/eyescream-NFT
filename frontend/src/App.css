@@ -140,14 +140,20 @@
 }
 
 .count-down-panel-hours {
+  display: flex;
   border-style: solid;
+  justify-content: center;
+  align-items: center;
   margin-left: 10%;
   width: 12%;
   min-height: 12vh;
 }
 
 .count-down-panel-minutes {
+  display: flex;
   border-style: solid;
+  justify-content: center;
+  align-items: center;
   width: 12%;
   margin-left: 10%;
   min-height: 12vh;
@@ -156,7 +162,10 @@
 
 
 .count-down-panel-seconds {
+  display: flex;
   border-style: solid;
+  justify-content: center;
+  align-items: center;
   width: 12%;
   margin-left: 10%;
   min-height: 12vh;

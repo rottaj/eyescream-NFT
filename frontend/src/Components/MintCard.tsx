@@ -27,7 +27,7 @@ import EyeScreamPreview from "../images/eyescreamscoop.jpg";
                     <img src={EyeScreamPreview} className="mint-img"></img>
                     <div className="mint-card-eyescream-info">
                         <h3 className="current-price-h3">Current Price</h3>
-                        <h1>0.08 ETH Each</h1>
+                        <h1 className="current-price-h1">0.08 ETH Each</h1>
                         <h3>10,101/10,101 remain</h3>
                     </div>
                 </div>

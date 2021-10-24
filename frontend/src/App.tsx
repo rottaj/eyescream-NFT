@@ -1,9 +1,10 @@
 import React from 'react';
 import EyeScreamPreview from "./images/eyescreamscoop.jpg";
 import SprinklesBackground from "./images/sprinkles.png";
-import DripBackground from "./images/DripBackground.jpg"
-import Roadmap from "./images/roadmap.jpg"
-import MintCard from "./Components/MintCard"
+import DripBackground from "./images/DripBackground.jpg";
+import Roadmap from "./images/roadmap.jpg";
+import MintCard from "./Components/MintCard";
+import CountDown from "./Components/CountDown";
 import './App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -72,11 +73,11 @@ function App() {
           <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
           </Swiper>
         </div>
-
         <div className="road-map-and-info">
           <img src={Roadmap}></img>
 
         </div>
+        <CountDown/>
         <div className="mint-panel">
           <h1 className="mint-header">Join Eyescream!</h1>
           <MintCard/>     

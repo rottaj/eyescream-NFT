@@ -54,6 +54,8 @@
   cursor: pointer;
 }
 
+/* -------- Start of about -------- */
+
 .collection-preview {
   height: 50vh;
 }
@@ -84,6 +86,8 @@
   width: 100%;
 }
 
+/* ---------- End of about ---------- */
+/* ------- Start of Collection swiper ----------- */
 .swiper-slide {
  position: relative;
  display: block;
@@ -109,7 +113,38 @@
   font-size: calc(50px + 2vmin);
   color: rgb(252, 186, 3)
 }
+/* --------End of Collection swiper -------- */
 
+/* --------- Start of Countdown --------- */
+.count-down-panel {
+  width: 100%;
+  margin-top: 5%;
+  display: inline-block;
+  text-align: justify;
+}
+
+.count-down-panel-days {
+  text-align: center;
+  border-style: solid;
+  width: 12%;
+  min-height: 12vh;
+}
+
+.count-down-panel-hours {
+  border-style: solid;
+  width: 12%;
+  min-height: 12vh;
+}
+
+.count-down-panel-seconds {
+  border-style: solid;
+  width: 12%;
+  min-height: 12vh;
+}
+
+/* --------- End of Countdown --------- */
+
+/* --------Start of RoadMap ------ */
 img {
   max-width: 100%;
   max-height: 100%;
@@ -124,10 +159,14 @@ img {
   font-size: calc(10px + 2vmin);
   */
 }
+/* --------- End of roadmap --------- */
 
+/* ---------- Start of mint panel --------- */
 .mint-panel {
   margin-top: 15%;
-  height: 25%;
+  height: 100%;
+  min-width: 80%;
+  /*width: 100%; */
 }
 
 .mint-header {
@@ -137,8 +176,8 @@ img {
 
 .mint-card {
   border-style: solid;
-  min-height: 100%;
-  min-width: 25%;
+  height: 100%;
+  min-width: 30%;
   margin-left: 25%;
   margin-right: 25%;
   padding-bottom: 2%;
@@ -150,25 +189,36 @@ img {
 .mint-img {
   height: 30%;
   width: 30%;
+  object-fit: cover;
   flex-direction: row;
+  flex: 1;
+}
+
+.current-price-h1 {
+  font-size: calc(75% + 2vmin);
 }
 
 .mint-card-title {
   width: 100%;
   display: flex;
   flex-direction: center;
+  flex-wrap: wrap;
 }
 
 .mint-card-eyescream-info {
   margin-top: 7%;
+  flex: 1;
   margin-left: 25%;
+  align-items: left;
+  font-size: calc(20% + 2vmin);
 }
 
 .mint-card-eyescream {
   width: 100%;
   display: flex;
-  flex-direction: center;
-  align-items: stretch;
+  flex-direction: stretch;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .mint-card-button-buy {
@@ -184,16 +234,27 @@ img {
 }
 
 .mint-card-total {
+  width: 100%;
   display: flex;
-  flex-direction:center;
-  align-items: stretch;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 .total-h3 {
   margin-top: 5%;
+  align-items: center;
+  font-size: calc(5px + 2vmin);
 }
 .mint-card-total-price-h1 {
-  margin-left: 60%;
+  margin-left: 30%;
+  display: inline-block;
+  font-size: calc(100% + 2vmin);
 }
+
+/* ----------- End of mint panel ---------- */
+
+/* ----------- Start of team panel ---------- */
 
 .team-header {
   font-family: retro-font;
@@ -238,3 +299,6 @@ img {
   height: 50vh;
   max-width: 50vh;
 }
+
+
+/* ----------- End of team panel ------------ */

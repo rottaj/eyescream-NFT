@@ -85,7 +85,7 @@ function App() {
         <h1 className="team-header">Meet the flavors</h1>
         <div className="team-members">
           <div className="member-dev">
-            <img src={EyeScreamPreview}></img>
+            <img className="team-img" src={EyeScreamPreview}></img>
 
             <h3>Creme Dev</h3>
             <p>Jack is a 21 year old full time software engineer living in Hoboken, NJ. 
@@ -93,7 +93,7 @@ function App() {
             </p>
           </div>
           <div className="member-dev-2">
-            <img src={EyeScreamPreview}></img>
+            <img className="team-img" src={EyeScreamPreview}></img>
 
             <h3>Cake Dev</h3>
             <p>Ariq is a 21 year old full time software engineer living in Houston, TX. 
@@ -101,7 +101,7 @@ function App() {
             </p>
           </div>
           <div className="member-boy">
-            <img src={EyeScreamPreview}></img>
+            <img className="team-img" src={EyeScreamPreview}></img>
             <h3>Pie Boy</h3>
             <p>
               Peter is a 22 year financial analyst living in Manhattan, NYC.
@@ -109,7 +109,7 @@ function App() {
             </p>
           </div>
           <div className="member-artist">
-            <img src={EyeScreamPreview}></img>
+            <img className="team-img" src={EyeScreamPreview}></img>
             <h3>Baby Artist</h3>
             <p>Eli is a 22 year old artist based in Manhattan, NYC. He has started numerous
               clothing companies based around his art work.

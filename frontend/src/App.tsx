@@ -13,6 +13,14 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 var startTime = 1635654241699;
+declare let window: any
+const connectWallet = async () => {
+  if(window.ethereum) {
+    var accounts = await window.ethereum.send('eth_requestAccounts');
+    console.log(accounts)
+    window.ethereum.enable()
+  }
+}
 
 function App() {
   return (
@@ -23,7 +31,7 @@ function App() {
         <a href="https://discord.gg/AS79UbJCfV" className="fab fa-discord fa-2x"></a>
       </div>
       <div className="connect-wallet">
-        <button className="wallet-button">Connect Wallet</button>
+        <button className="wallet-button" onClick={connectWallet}>Connect Wallet</button>
       </div>
 
       <div className="App">

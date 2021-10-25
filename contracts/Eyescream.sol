@@ -4,6 +4,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "base64-sol/base64.sol";
 
 contract Eyescream is Ownable, ERC721URIStorage {
     using Counters for Counters.Counter;
@@ -16,9 +17,25 @@ contract Eyescream is Ownable, ERC721URIStorage {
 
     constructor() ERC721("Eyescream", "EYE") {}
 
-    function mint(string memory _svg) external payable{ 
-        require(_tokenCounter.current() < MAX_SUPPLY);
-        _safeMint(msg.sender, _tokenCounter.current());
+
+    function svgToUri(string memory _svg) public pure returns (string memory) {
+        string memory baseURL = "data:image/svg+xml;base64,";
+        string memory svgBase64Encoded = Base64.encode(bytes(string(abi.encodePacked(svg))));
+        return string(abi.encodePacked(baseURL,svgBase64Encoded));
+    }
+
+    function mint(string memory _svg, uint256 _quantity) external payable{ 
+        require(_tokenCounter.current() < MAX_SUPPLY, "SOLD_OUT");
+        require(_quantity > 0, "INVALID_AMOUNT");
+        require(_quantity <= MAX_PER_TX, "SOLD_OUT");
+        require(_tokenCounter.current() + _quantity <= MAX_SUPPLY, "SOLD_OUT");
+        require(msg.value == (_quantity * PRICE), "INVALID_ETHER");
+        for (uint i =0; i<= _quantity; i++ ) {
+            _tokenCounter.increment();
+            _safeMint(msg.sender, _tokenCounter.current());
+            _tokenURI = svgToUri(_svg);
+            _setTokenURI(tokenCounter.current(), _tokenURI);
+        }
 
     }
 

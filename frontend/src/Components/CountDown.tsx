@@ -36,7 +36,6 @@ class CountDown extends React.Component<Props, State, Interval> {
 
     initializeTimer = () => {
         const startDate = this.props.startTime
-        console.log(startDate)
         const now = new Date().getTime();
         if (!startDate) {
             this.setState({ expired: true})
@@ -62,16 +61,16 @@ class CountDown extends React.Component<Props, State, Interval> {
         return (
             <div className="count-down-panel">
                 <div className="count-down-panel-days">
-                    {this.state.days}                
+                    <h1>{this.state.days}</h1>
                 </div>
                 <div className="count-down-panel-hours">
-                    {this.state.hours}
+                    <h1>{this.state.hours}</h1>
                 </div>
                 <div className="count-down-panel-minutes">
-                    {this.state.minutes}
+                    <h1>{this.state.minutes}</h1>
                 </div>
                 <div className="count-down-panel-seconds">
-                    {this.state.seconds}
+                    <h1>{this.state.seconds}</h1>
                 </div>
             </div>
         )

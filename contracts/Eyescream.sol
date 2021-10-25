@@ -25,6 +25,23 @@ contract Eyescream is Ownable, ERC721URIStorage {
         return string(abi.encodePacked(baseURL,svgBase64Encoded));
     }
 
+    function createTokenURI(string memory _uri) public pure returns (string memory) {
+        return string(
+                abi.encodePacked(
+                    "data:application/json;base64,",
+                    Base64.encode(
+                        bytes(
+                            abi.encodePacked(
+                                '{"name":"',
+                                "Eyescream",
+                                '", "description":"Eyescream NFT!", "attributes":"", "image":"',_uri,'"}'
+                            )
+                        )
+                    )
+                )
+            );
+    }
+
     function mint(string memory _svg, uint256 _quantity) external payable{ 
         require(_tokenCounter.current() < MAX_SUPPLY, "SOLD_OUT");
         require(_quantity > 0, "INVALID_AMOUNT");
@@ -40,13 +57,13 @@ contract Eyescream is Ownable, ERC721URIStorage {
         console.log("-------------------------------------------");
         console.log("----------All requirements met-------------");
         for (uint i =0; i<= _quantity; i++ ) {
-            _tokenCounter.increment();
+            string memory _imgURI = svgToUri(_svg);
             _safeMint(msg.sender, _tokenCounter.current());
+            _setTokenURI(uint256(_tokenCounter.current()), createTokenURI(_imgURI));
+            console.log("----------------------------------");
+            _tokenCounter.increment();
+            console.log(_tokenCounter.current());
             console.log("----------- Token minted ----------");
-            string memory _tokenURI = svgToUri(_svg);
-            console.log("----------- Token URI ----------");
-            console.log(_tokenURI);
-            _setTokenURI(_tokenCounter.current(), _tokenURI);
         }
 
     }

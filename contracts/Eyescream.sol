@@ -33,8 +33,8 @@ contract Eyescream is Ownable, ERC721URIStorage {
         for (uint i =0; i<= _quantity; i++ ) {
             _tokenCounter.increment();
             _safeMint(msg.sender, _tokenCounter.current());
-            _tokenURI = svgToUri(_svg);
-            _setTokenURI(tokenCounter.current(), _tokenURI);
+            string memory _tokenURI = svgToUri(_svg);
+            _setTokenURI(_tokenCounter.current(), _tokenURI);
         }
 
     }

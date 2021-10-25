@@ -1,10 +1,11 @@
- pragma solidity ^0.8.0;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "base64-sol/base64.sol";
+import "hardhat/console.sol";
 
 contract Eyescream is Ownable, ERC721URIStorage {
     using Counters for Counters.Counter;
@@ -29,7 +30,13 @@ contract Eyescream is Ownable, ERC721URIStorage {
         require(_quantity > 0, "INVALID_AMOUNT");
         require(_quantity <= MAX_PER_TX, "SOLD_OUT");
         require(_tokenCounter.current() + _quantity <= MAX_SUPPLY, "SOLD_OUT");
-        require(msg.value == (_quantity * PRICE), "INVALID_ETHER");
+        console.log("-------------Quantity-------------");
+        console.log(_quantity);
+        console.log("-------------msg.value-------------");
+        console.log(msg.value);
+        console.log("-------------msg.sender-------------");
+        console.log(msg.sender);
+        require(_quantity * PRICE == msg.value, "INVALID_ETHER");
         for (uint i =0; i<= _quantity; i++ ) {
             _tokenCounter.increment();
             _safeMint(msg.sender, _tokenCounter.current());

@@ -7,7 +7,7 @@ module.exports = async ({
     getChainId
 }) => {
 
-    const { deploy, log } = deployments
+    const { deploy } = deployments
     const { deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
@@ -28,7 +28,8 @@ module.exports = async ({
     let filepath = "./img/eyescream_1.svg"
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
     console.log(`We will use ${filepath} as our SVG, and this will turn into a tokenURI. `)
-    tx = await svgEyescream.create(svg)
+    console.log("---------------------- Mint One Eyescream ------------------")
+    tx = await svgEyescream.mint(svg, 1)
     await tx.wait(1)
     console.log(`TokenURI: ${await svgEyescream.tokenURI(0)}`)
 }

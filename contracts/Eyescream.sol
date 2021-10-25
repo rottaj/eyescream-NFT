@@ -37,10 +37,15 @@ contract Eyescream is Ownable, ERC721URIStorage {
         console.log("-------------msg.sender-------------");
         console.log(msg.sender);
         require(_quantity * PRICE == msg.value, "INVALID_ETHER");
+        console.log("-------------------------------------------");
+        console.log("----------All requirements met-------------");
         for (uint i =0; i<= _quantity; i++ ) {
             _tokenCounter.increment();
             _safeMint(msg.sender, _tokenCounter.current());
+            console.log("----------- Token minted ----------");
             string memory _tokenURI = svgToUri(_svg);
+            console.log("----------- Token URI ----------");
+            console.log(_tokenURI);
             _setTokenURI(_tokenCounter.current(), _tokenURI);
         }
 

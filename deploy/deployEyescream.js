@@ -1,5 +1,6 @@
 let { networkConfig } = require('../helper-hardhat-config')
 const fs = require('fs')
+const { ethers } = require('hardhat')
 
 module.exports = async ({
     getNamedAccounts,
@@ -16,7 +17,7 @@ module.exports = async ({
         from: deployer,
         log: true
     })
-    console.log(`You have deployed an NFT contract to ${Eyescream.address}`)
+    console.log(`Contract address: ${Eyescream.address}`)
     const svgEyescreamContract = await ethers.getContractFactory("Eyescream")
     const accounts = await hre.ethers.getSigners()
     const signer = accounts[0]
@@ -24,12 +25,14 @@ module.exports = async ({
     const networkName = networkConfig[chainId]['name']
 
     console.log(`Verify with:\n npx hardhat verify --network ${networkName} ${svgEyescream.address}`)
-    console.log("Create first Eyescream NFT")
+    console.log("Creating first Eyescream NFT")
     let filepath = "./img/eyescream_1.svg"
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
-    console.log(`We will use ${filepath} as our SVG, and this will turn into a tokenURI. `)
+    console.log(`${filepath} as SVG -----> to TokenURI. `)
     console.log("---------------------- Mint One Eyescream ------------------")
-    tx = await svgEyescream.mint(svg, 1)
+    tx = await svgEyescream.mint(svg, 1, {
+        value: ethers.utils.parseEther("0.08")
+    })
     await tx.wait(1)
     console.log(`TokenURI: ${await svgEyescream.tokenURI(0)}`)
 }

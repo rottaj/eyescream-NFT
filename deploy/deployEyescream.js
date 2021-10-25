@@ -25,7 +25,7 @@ module.exports = async ({
 
     console.log(`Verify with:\n npx hardhat verify --network ${networkName} ${svgEyescream.address}`)
     console.log("Create first Eyescream NFT")
-    let filepath = "./img/small_enough.svg"
+    let filepath = "./img/eyescream_1.svg"
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
     console.log(`We will use ${filepath} as our SVG, and this will turn into a tokenURI. `)
     tx = await svgEyescream.create(svg)

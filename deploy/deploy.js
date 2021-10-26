@@ -10,7 +10,7 @@ const main = async () => {
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
 
     let txn;
-    txn = await eyeScreamContract.mint(svg, 1, {
+    txn = await eyeScreamContract.mint(svg, 1, { // mints 2 tokens
         value: ethers.utils.parseEther("0.08")
     });
     await txn.wait();

@@ -25,7 +25,7 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    hardhat: { },
+    //hardhat: { },
     rinkeby: {
       url: RINKEBY_RPC_URL,
       accounts: [

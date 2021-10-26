@@ -28,7 +28,7 @@ module.exports = async ({
     console.log("Creating first Eyescream NFT")
     let filepath = "./img/eyescream_1.svg"
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
-    console.log(`${filepath} as SVG -----> to TokenURI. `)
+    console.log(`${filepath} as SVG -- > to TokenURI. `)
     console.log("---------------------- Mint One Eyescream ------------------")
     tx = await svgEyescream.mint(svg, 1, {
         value: ethers.utils.parseEther("0.08")

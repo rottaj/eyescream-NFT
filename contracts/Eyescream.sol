@@ -14,7 +14,7 @@ contract Eyescream is Ownable, ERC721URIStorage {
     uint256 public constant MAX_SUPPLY = 10101; // Total number of Eyescream tokens.
     uint256 public constant PRICE = 0.08 ether; 
     uint256 public constant MAX_PER_TX = 3;
-    address private constant _owner = 0x5ab990103E453a55ACA6e458Fe9317B1F476d2B7;
+    address private constant _owner = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
 
     constructor() ERC721("Eyescream", "EYE") {}
 
@@ -47,22 +47,12 @@ contract Eyescream is Ownable, ERC721URIStorage {
         require(_quantity > 0, "INVALID_AMOUNT");
         require(_quantity <= MAX_PER_TX, "SOLD_OUT");
         require(_tokenCounter.current() + _quantity <= MAX_SUPPLY, "SOLD_OUT");
-        console.log("-------------Quantity-------------");
-        console.log(_quantity);
-        console.log("-------------msg.value-------------");
-        console.log(msg.value);
-        console.log("-------------msg.sender-------------");
-        console.log(msg.sender);
         require(_quantity * PRICE == msg.value, "INVALID_ETHER");
-        console.log("-------------------------------------------");
-        console.log("----------All requirements met-------------");
         for (uint i =0; i<= _quantity; i++ ) {
             string memory _imgURI = svgToUri(_svg);
             _safeMint(msg.sender, _tokenCounter.current());
             _setTokenURI(uint256(_tokenCounter.current()), createTokenURI(_imgURI));
-            console.log("----------------------------------");
             _tokenCounter.increment();
-            console.log(_tokenCounter.current());
             console.log("----------- Token minted ----------");
         }
 

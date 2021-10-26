@@ -26,7 +26,7 @@ module.exports = async ({
 
     console.log(`Verify with:\n npx hardhat verify --network ${networkName} ${svgEyescream.address}`)
     console.log("Creating first Eyescream NFT")
-    let filepath = "./img/eyescream_1.svg"
+    let filepath = "./img/eyescream_1.svg" // will update every mint... removing previous img. ( All art will be generated before hand )
     let svg = fs.readFileSync(filepath, { encoding: "utf8" })
     console.log(`${filepath} as SVG -- > to TokenURI. `)
     console.log("---------------------- Mint One Eyescream ------------------")

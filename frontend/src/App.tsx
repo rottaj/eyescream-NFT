@@ -7,7 +7,6 @@ import MintCard from "./Components/MintCard";
 import CountDown from "./Components/CountDown";
 import './App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";

@@ -1,11 +1,35 @@
 import React from 'react';
+import fs, { readFileSync } from 'fs';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
+import eyescreamInterface from '../json/eyescreamInterface.json'
+import { JsonObjectExpressionStatement } from 'typescript';
+import { ECKeyPairKeyObjectOptions } from 'crypto';
+//import ERC721URIStorageInterface from '../interfaces/ERC721URIStorage';
+const { _abi } = require('../interfaces/EyescreamInterface');
+var Contract = require('web3-eth-contract');
 
- class MintCard extends React.Component {
+class MintCard extends React.Component {
 
     state = {
         coins: 1,
         amountEth: 0.08,
+    }
+
+
+    componentDidMount() {
+        require("dotenv").config()
+        const RINKEBY_URL = process.env.RINKEBY_URL;
+        Contract.setProvider(RINKEBY_URL);
+        var contractAddress = "0x1744913b0142112B169a2e1A7b91BB67e4CCFC88"
+        var contract = new Contract(_abi, contractAddress)
+        console.log(contract)
+        //console.log("INTERFACE", eyescreamInterface)
+        //var eyescreamABi: EyescreamInterface = JSON.parse(eyescreamInterface);
+        //var eyeScreamAbi: EyescreamInterface = JSON.parse(eyescreamInterface)
+        //console.log(eyeScreamAbi)
+        //var contract = new Contract(eyeScreamAbi, RINKEBY_URL)
+        //var contract = new Contract(eyescreamInterface, RINKEBY_URL)
+
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,4 +72,4 @@ import EyeScreamPreview from "../images/eyescreamscoop.jpg";
     }
  }
 
- export default MintCard
+export default MintCard

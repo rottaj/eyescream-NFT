@@ -15,7 +15,8 @@ class MintCard extends React.Component <Props>{
 
     contract: {
         methods: {
-            totalAmount: any
+            totalAmount: any,
+            mint: any
         },
         setProvider: any
     }
@@ -37,16 +38,23 @@ class MintCard extends React.Component <Props>{
         tokenCount: null,
     }
 
+    /* ////// ---------> Probably gonna want to add SQL database to fetch from... will get to this later.
     async getAmount(){
-        /// Probably gonna want to add SQL database to fetch from... will get to this later.
         var totalAmount = await this.contract.methods.totalAmount().call();
         console.log(totalAmount)
     }
 
     async componentDidMount() {
         console.log(this.contract.methods)
-        var totalAmount = this.getAmount()
-        console.log(totalAmount)
+        //var totalAmount = this.getAmount()
+        //console.log(totalAmount)
+    }
+    */
+
+    async onSubmitMint(e: any) { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
+        e.preventDefault();
+        console.log("E:", e.target[0].value)
+        console.log("Testing Mint",this.contract.methods.mint)
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,17 +81,16 @@ class MintCard extends React.Component <Props>{
                     </div>
                 </div>
 
-                <form className="mint-form">
+                <form className="mint-form" onSubmit={(e) => this.onSubmitMint(e)}>
                     <input className="mint-form-token-amount" type="text" id="token-amount" name="token-amount" placeholder="Enter number of Eyescreams you want." value={this.state.coins} onChange={this.onChangeCalculateTotal}/>
-                </form>
                 <hr></hr>
                 <div className="mint-card-total">
                     <h3 className="total-h3">Total</h3>
                     <h1 className="mint-card-total-price-h1">{this.state.amountEth} ETH</h1>
                 </div>
                 <hr></hr>
-                <button className="mint-card-button-buy">Buy now!</button>
-
+                <button type="submit" className="mint-card-button-buy">Buy now!</button>
+                </form>
             </div>
         )
     }

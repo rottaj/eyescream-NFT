@@ -32,14 +32,17 @@ class MintCard extends React.Component <Props>{
     }
 
     async getAmount(){
-        var totalAmount = await this.contract.methods.totalAmount();
-        return totalAmount
+        /// Probably gonna want to add SQL database to fetch from... will get to this later.
+        //var totalAmount = await this.contract.methods.totalAmount().call();
+        //console.log(totalAmount)
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        /*
         console.log(this.contract.methods)
         var totalAmount = this.getAmount()
         console.log(totalAmount)
+        */
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {

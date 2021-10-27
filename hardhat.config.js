@@ -1,4 +1,4 @@
-require('@typechain/hardhat')
+//require('@typechain/hardhat')
 require('@nomiclabs/hardhat-waffle');
 require('hardhat-deploy');
 

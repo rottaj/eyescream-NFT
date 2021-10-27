@@ -23,13 +23,6 @@ class MintCard extends React.Component {
         var contractAddress = "0x1744913b0142112B169a2e1A7b91BB67e4CCFC88"
         var contract = new Contract(_abi, contractAddress)
         console.log(contract)
-        //console.log("INTERFACE", eyescreamInterface)
-        //var eyescreamABi: EyescreamInterface = JSON.parse(eyescreamInterface);
-        //var eyeScreamAbi: EyescreamInterface = JSON.parse(eyescreamInterface)
-        //console.log(eyeScreamAbi)
-        //var contract = new Contract(eyeScreamAbi, RINKEBY_URL)
-        //var contract = new Contract(eyescreamInterface, RINKEBY_URL)
-
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {

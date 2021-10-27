@@ -7,9 +7,13 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from "ethers";
 import Web3 from "web3";
 
+
+require('dotenv').config()
+const RINKEBY_URL = process.env.RINKEBY_URL;
+
 declare let window: any;
 const getProvider = async () => {
-  let web3 = new Web3(Web3.givenProvider || "https://rinkeby.infura.io/v3/a9354cba6f634a2c98574368fc571987")
+  let web3 = new Web3(Web3.givenProvider || RINKEBY_URL)
 }
 document.title = "Eyescream"
 ReactDOM.render(

@@ -1,8 +1,12 @@
 import React from 'react';
-import fs, { readFileSync } from 'fs';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 const { _abi } = require('../interfaces/EyescreamInterface');
 var Contract = require('web3-eth-contract');
+const Web3 = require('web3');
+const web3 = new Web3(Web3.givenProvider);
+require("dotenv").config()
+const RINKEBY_URL = process.env.RINKEBY_URL;
+
 
 interface Props {
 }
@@ -12,17 +16,19 @@ class MintCard extends React.Component <Props>{
     contract: {
         methods: {
             totalAmount: any
-        }
+        },
+        setProvider: any
     }
 
     constructor(props: Props) {
         super(props)
-        require("dotenv").config()
-        const RINKEBY_URL = process.env.RINKEBY_URL;
+
         Contract.setProvider(RINKEBY_URL);
         var contractAddress = "0x7c986641D92dA20d53aFCf5d3B57Fd9be02caD1d"
         var contract = new Contract(_abi, contractAddress)
         this.contract = contract
+        this.contract.setProvider(web3.currentProvider);
+        console.log(contract)
 
     }
     state = {
@@ -33,16 +39,14 @@ class MintCard extends React.Component <Props>{
 
     async getAmount(){
         /// Probably gonna want to add SQL database to fetch from... will get to this later.
-        //var totalAmount = await this.contract.methods.totalAmount().call();
-        //console.log(totalAmount)
+        var totalAmount = await this.contract.methods.totalAmount().call();
+        console.log(totalAmount)
     }
 
     async componentDidMount() {
-        /*
         console.log(this.contract.methods)
         var totalAmount = this.getAmount()
         console.log(totalAmount)
-        */
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {

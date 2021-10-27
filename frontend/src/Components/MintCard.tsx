@@ -1,28 +1,45 @@
 import React from 'react';
 import fs, { readFileSync } from 'fs';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
-import eyescreamInterface from '../json/eyescreamInterface.json'
-import { JsonObjectExpressionStatement } from 'typescript';
-import { ECKeyPairKeyObjectOptions } from 'crypto';
-//import ERC721URIStorageInterface from '../interfaces/ERC721URIStorage';
 const { _abi } = require('../interfaces/EyescreamInterface');
 var Contract = require('web3-eth-contract');
 
-class MintCard extends React.Component {
+interface Props {
+}
 
-    state = {
-        coins: 1,
-        amountEth: 0.08,
+class MintCard extends React.Component <Props>{
+
+    contract: {
+        methods: {
+            totalAmount: any
+        }
     }
 
-
-    componentDidMount() {
+    constructor(props: Props) {
+        super(props)
         require("dotenv").config()
         const RINKEBY_URL = process.env.RINKEBY_URL;
         Contract.setProvider(RINKEBY_URL);
-        var contractAddress = "0x1744913b0142112B169a2e1A7b91BB67e4CCFC88"
+        var contractAddress = "0x7c986641D92dA20d53aFCf5d3B57Fd9be02caD1d"
         var contract = new Contract(_abi, contractAddress)
-        console.log(contract)
+        this.contract = contract
+
+    }
+    state = {
+        coins: 1,
+        amountEth: 0.08,
+        tokenCount: null,
+    }
+
+    async getAmount(){
+        var totalAmount = await this.contract.methods.totalAmount();
+        return totalAmount
+    }
+
+    componentDidMount() {
+        console.log(this.contract.methods)
+        var totalAmount = this.getAmount()
+        console.log(totalAmount)
     }
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {

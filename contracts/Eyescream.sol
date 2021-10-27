@@ -18,6 +18,9 @@ contract Eyescream is Ownable, ERC721URIStorage {
 
     constructor() ERC721("Eyescream", "EYE") {}
 
+    function totalAmount() public view returns (uint256) {
+        return uint256(_tokenCounter.current());
+    }
 
     function svgToUri(string memory _svg) public pure returns (string memory) {
         string memory baseURL = "data:image/svg+xml;base64,";

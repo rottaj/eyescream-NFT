@@ -9,6 +9,7 @@ const RINKEBY_URL = process.env.RINKEBY_URL;
 
 interface Props {
     window: any;
+    //account:any;
 }
 
 var contractAddress = "0x7c986641D92dA20d53aFCf5d3B57Fd9be02caD1d";
@@ -28,16 +29,17 @@ export default class MintCard extends React.Component <Props>{
         console.log("E:", e.target[0].value)
         if (this.props.window.ethereum) {
             const provider = new ethers.providers.Web3Provider(this.props.window.ethereum);
-            const signer = provider.getSigner();
+            const signer = await provider.getSigner();
+            await signer.getAddress()
             console.log("SIGNER", signer)
+            //signer._address = this.props.account;
             const contract = new ethers.Contract(contractAddress, _abi, signer);
-            /*
+
             for (let i=0; i <= parseInt(e.target[0].value); i++) {
                 const tx = await contract.mint(eyescream_1, {
                     value: ethers.utils.parseEther("0.08")
                 });
             }
-            */
         }
     }
 

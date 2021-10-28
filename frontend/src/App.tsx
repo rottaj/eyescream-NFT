@@ -1,8 +1,15 @@
 import React from 'react';
 //import SprinklesBackground from "./images/sprinkles.png";
 //import DripBackground from "./images/DripBackground.jpg";
+import one from "./images/collection_slider/one.png";
+import two from "./images/collection_slider/two.png";
+import three from "./images/collection_slider/three.png";
+import four from "./images/collection_slider/three.png";
+import five from "./images/collection_slider/four.png";
+import six from "./images/collection_slider/six.png";
 import EyeScreamPreview from "./images/eyescreamscoop.jpg";
-import Roadmap from "./images/roadmap.jpg";
+import EyeScreamPreviewGif from "./images/eyescream_preview.gif";
+import Roadmap from "./images/roadmap.png";
 import MintCard from "./Components/MintCard";
 import CountDown from "./Components/CountDown";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,7 +18,8 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import './App.css';
 
-
+import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
+SwiperCore.use([EffectCoverflow, Pagination])
 
 declare let window: any
 
@@ -58,7 +66,7 @@ export default class App extends React.Component {
           <header className="App-header">The Eyescream Project</header>
 
           <div className="collection-preview">
-            <img src={EyeScreamPreview}></img>
+            <img className="collection-preview-gif" src={EyeScreamPreviewGif}></img>
           </div>
 
           <div className="about">
@@ -77,19 +85,21 @@ export default class App extends React.Component {
           <h1 className="collection-header">The Inside Scoop</h1>
           <div>
             <Swiper
+              effect={'coverflow'}
               className="swiper-container"
+              grabCursor={true}
               spaceBetween={200}
               slidesPerView={4}
-              centeredSlides
+              centeredSlides={true}
               onSlideChange={() => console.log("slide change")}
               onSwiper={swiper => console.log(swiper)}
             >
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img"src={one}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={two}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={three}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={four}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={five}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={six}/></SwiperSlide>
             <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
             <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
             <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>

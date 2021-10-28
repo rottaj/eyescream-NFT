@@ -58,6 +58,13 @@
 
 .collection-preview {
   height: 50vh;
+  margin-bottom: 8%;
+}
+
+.collection-preview-gif {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 90%;
 }
 
 .App-header {
@@ -95,6 +102,11 @@
  height: 100%;
  object-fit: cover;
 
+}
+
+.swiper-slide-img {
+  height: 200%;
+  width: 200%;
 }
 
 .swiper-container {

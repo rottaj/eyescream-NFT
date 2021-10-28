@@ -35,6 +35,9 @@ export default class MintCard extends React.Component <Props>{
     }
 
     async socketCallBackMint(contract: any, quantity: string, file: string) {
+        console.log("CONTRACTDFOOOOBER", contract)
+        console.log("QUANTIIYYYFOOOBAR", typeof(quantity))
+        console.log("TESTINGFILELLSOOOBAR", file)
         for (let i=0; i <= parseInt(quantity); i++) { // will replace eyescream_1 with next in line. (Removing recently minted token)
             const tx = await contract.mint(file, {
                 value: ethers.utils.parseEther("0.08")

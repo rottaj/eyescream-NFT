@@ -242,11 +242,6 @@ export const _abi = [
         "internalType": "string",
         "name": "_svg",
         "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_quantity",
-        "type": "uint256"
       }
     ],
     "name": "mint",

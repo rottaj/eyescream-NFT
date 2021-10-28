@@ -45,20 +45,15 @@ contract Eyescream is Ownable, ERC721URIStorage {
             );
     }
 
-    function mint(string memory _svg, uint256 _quantity) external payable{ 
+    function mint(string memory _svg) external payable{ 
         require(_tokenCounter.current() < MAX_SUPPLY, "SOLD_OUT");
-        require(_quantity > 0, "INVALID_AMOUNT");
-        require(_quantity <= MAX_PER_TX, "SOLD_OUT");
-        require(_tokenCounter.current() + _quantity <= MAX_SUPPLY, "SOLD_OUT");
-        require(_quantity * PRICE == msg.value, "INVALID_ETHER");
-        for (uint i =0; i<= _quantity; i++ ) {
-            string memory _imgURI = svgToUri(_svg);
-            _safeMint(msg.sender, _tokenCounter.current());
-            _setTokenURI(uint256(_tokenCounter.current()), createTokenURI(_imgURI));
-            _tokenCounter.increment();
-            console.log("----------- Token minted ----------");
-        }
-
+        require(_tokenCounter.current() + 1 <= MAX_SUPPLY, "SOLD_OUT");
+        require(PRICE == msg.value, "INVALID_ETHER");   
+        string memory _imgURI = svgToUri(_svg);
+        _safeMint(msg.sender, _tokenCounter.current());
+        _setTokenURI(uint256(_tokenCounter.current()), createTokenURI(_imgURI));
+        _tokenCounter.increment();
+        console.log("----------- Token minted ----------");
     }
 
 }

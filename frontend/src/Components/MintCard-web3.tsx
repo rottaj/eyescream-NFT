@@ -1,22 +1,40 @@
 import React from 'react';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
-import { ethers, Contract } from 'ethers';
-import { _abi } from '../interfaces/EyescreamInterface'
 import eyescream_1 from '../images/img/eyescream_1.svg';
-require('dotenv').config()
+const { _abi } = require('../interfaces/EyescreamInterface');
+var Contract = require('web3-eth-contract');
+const Web3 = require('web3');
+const web3 = new Web3(Web3.givenProvider);
+require("dotenv").config()
 const RINKEBY_URL = process.env.RINKEBY_URL;
-
-
 interface Props {
-    window: any;
+    account: any;
 }
 
-var contractAddress = "0x7c986641D92dA20d53aFCf5d3B57Fd9be02caD1d";
+class MintCard extends React.Component <Props>{
 
+    contract: {
+        methods: {
+            totalAmount: any,
+            mint: any
+        },
+        setProvider: any
+    }
+    account: any;
 
+    constructor(props: Props) {
+        super(props)
+        var contractAddress = "0x7c986641D92dA20d53aFCf5d3B57Fd9be02caD1d"
 
-export default class MintCard extends React.Component <Props>{
+        var contract = new Contract(_abi, contractAddress)
+        this.contract = contract;
+        this.contract.setProvider(web3.currentProvider);
+        this.account = web3.eth.accounts.create();
+        console.log("CONTRACT", this.contract);
+        console.log("Account", this.account);
 
+    }
+    
     state = {
         coins: 1,
         amountEth: 0.08,
@@ -25,22 +43,17 @@ export default class MintCard extends React.Component <Props>{
 
     async onSubmitMint(e: any) { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
         e.preventDefault();
+        console.log("Account foobar", this.props.account)
         console.log("E:", e.target[0].value)
-        if (this.props.window.ethereum) {
-            const provider = new ethers.providers.Web3Provider(this.props.window.ethereum);
-            const signer = provider.getSigner();
-            console.log("SIGNER", signer)
-            const contract = new ethers.Contract(contractAddress, _abi, signer);
+        console.log("Testing Mint",this.contract.methods.mint)
+        //for (let i=0; i<=e.taget[0].value; i++) {
             /*
-            for (let i=0; i <= parseInt(e.target[0].value); i++) {
-                const tx = await contract.mint(eyescream_1, {
-                    value: ethers.utils.parseEther("0.08")
-                });
-            }
+            var txn = await this.contract.methods.mint(eyescream_1, {
+                value: ethers.utils.parseEther("0.08")
+            })
             */
-        }
+        //}
     }
-
 
     onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {
         let tokenNum = parseInt(e.target.value) || 0;
@@ -51,8 +64,7 @@ export default class MintCard extends React.Component <Props>{
             amountEth: amount
         })
     }
-
-    render() {
+     render() {
         return (
             <div className="mint-card">
                 <div className="mint-card-title">
@@ -80,4 +92,6 @@ export default class MintCard extends React.Component <Props>{
             </div>
         )
     }
-}
+ }
+
+export default MintCard

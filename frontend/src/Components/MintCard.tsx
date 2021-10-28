@@ -1,11 +1,15 @@
 import React from 'react';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
+import io from 'socket.io-client';
 import { ethers, Contract } from 'ethers';
 import { _abi } from '../interfaces/EyescreamInterface'
-import eyescream_1 from '../images/img/eyescream_1.svg';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+const fs = require('fs');
 require('dotenv').config()
 const RINKEBY_URL = process.env.RINKEBY_URL;
-
+var socket = io("http://localhost:8080", {
+  withCredentials: false,
+})
 
 interface Props {
     window: any;
@@ -24,8 +28,23 @@ export default class MintCard extends React.Component <Props>{
         tokenCount: null,
     }
 
+    componentDidMount() {
+        socket.on("connection", () => {
+            console.log("Connected to backend")            
+        })
+    }
+
+    async socketCallBackMint(contract: any, quantity: string, file: string) {
+        for (let i=0; i <= parseInt(quantity); i++) { // will replace eyescream_1 with next in line. (Removing recently minted token)
+            const tx = await contract.mint(file, {
+                value: ethers.utils.parseEther("0.08")
+            });
+        }
+    }
+
     async onSubmitMint(e: any) { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
         e.preventDefault();
+        //var file: string
         console.log("E:", e.target[0].value)
         if (this.props.window.ethereum) {
             const provider = new ethers.providers.Web3Provider(this.props.window.ethereum);
@@ -34,12 +53,11 @@ export default class MintCard extends React.Component <Props>{
             console.log("SIGNER", signer)
             //signer._address = this.props.account;
             const contract = new ethers.Contract(contractAddress, _abi, signer);
+            await socket.emit("mint.token", {test: "testing"}, (response: any) => {
+                console.log("RESPONSE", response.filename)
+                this.socketCallBackMint(contract, e.target[0].value, response.filename)
+            }) 
 
-            for (let i=0; i <= parseInt(e.target[0].value); i++) { // will replace eyescream_1 with next in line. (Removing recently minted token)
-                const tx = await contract.mint(eyescream_1, {
-                    value: ethers.utils.parseEther("0.08")
-                });
-            }
         }
     }
 

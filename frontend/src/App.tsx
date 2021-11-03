@@ -23,6 +23,14 @@ import './App.css';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
 SwiperCore.use([EffectCoverflow, Pagination])
 
+function importAll(r:any) {
+  return r.keys().map(r);
+}
+
+
+const images = importAll(require.context('./images/collection_slider', false, /\.(png|jpe?g|svg)$/));
+
+
 declare let window: any
 
 export default class App extends React.Component {
@@ -93,25 +101,30 @@ export default class App extends React.Component {
               spaceBetween={200}
               slidesPerView={4}
               centeredSlides={true}
-              onSlideChange={() => console.log("slide change")}
+              onSlideChange={() => console.log("slide change", images[1])}
               onSwiper={swiper => console.log(swiper)}
             >
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img"src={one}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={two}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={three}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={four}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={five}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={six}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
-            <SwiperSlide className="swiper-slide"><img src={EyeScreamPreview}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img"src={images[0].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[1].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[2].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[3].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[5].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[6].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[7].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[8].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[9].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[10].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[11].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[12].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[13].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[14].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[15].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[16].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[17].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[18].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[19].default}/></SwiperSlide>
+            <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[20].default}/></SwiperSlide>
+
             </Swiper>
           </div>
           <div className="road-map-and-info">
@@ -131,7 +144,7 @@ export default class App extends React.Component {
             <div className="member-dev">
               <img className="team-img" src={JackMayc}></img>
 
-              <h3>Creme Dev</h3>
+              <h3>Phyllis Mcroy</h3>
               <p>Jack is a 21 year old full time software engineer living in Hoboken, NJ. 
                 Web3 enthusiast, w/ deep understanding of cryptocurrency and blockchain.
               </p>
@@ -139,8 +152,8 @@ export default class App extends React.Component {
             <div className="member-dev-2">
               <img className="team-img" src={AhawkNft}></img>
 
-              <h3>Cake Dev</h3>
-              <p>Ariq is a 21 year old full time software engineer living in Houston, TX. 
+              <h3>Mr. Ahawk</h3>
+              <p>Ariq is a 21 year old full time software engineer living in Manhattan. 
                 Web3 enthusiast, w/ deep understanding of cryptocurrency and blockchain.
               </p>
             </div>

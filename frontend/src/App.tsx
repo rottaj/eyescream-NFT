@@ -8,6 +8,8 @@ import four from "./images/collection_slider/three.png";
 import five from "./images/collection_slider/four.png";
 import six from "./images/collection_slider/six.png";
 import EyeScreamPreview from "./images/eyescreamscoop.jpg";
+import JackMayc from "./images/my_fucking_mayc.png";
+import AhawkNft from "./images/ahawk_nft.png";
 import EyeScreamPreviewGif from "./images/eyescream_preview.gif";
 import Roadmap from "./images/roadmap.png";
 import MintCard from "./Components/MintCard";
@@ -127,7 +129,7 @@ export default class App extends React.Component {
           <h1 className="team-header">Meet the flavors</h1>
           <div className="team-members">
             <div className="member-dev">
-              <img className="team-img" src={EyeScreamPreview}></img>
+              <img className="team-img" src={JackMayc}></img>
 
               <h3>Creme Dev</h3>
               <p>Jack is a 21 year old full time software engineer living in Hoboken, NJ. 
@@ -135,7 +137,7 @@ export default class App extends React.Component {
               </p>
             </div>
             <div className="member-dev-2">
-              <img className="team-img" src={EyeScreamPreview}></img>
+              <img className="team-img" src={AhawkNft}></img>
 
               <h3>Cake Dev</h3>
               <p>Ariq is a 21 year old full time software engineer living in Houston, TX. 

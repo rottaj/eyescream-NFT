@@ -143,6 +143,7 @@
 }
 
 .count-down-panel-days {
+  background-image: url("./images/DripBackground.jpg");
   display: flex;
   justify-content: center;
   align-items: center;

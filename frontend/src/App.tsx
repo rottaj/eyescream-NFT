@@ -29,7 +29,7 @@ export default class App extends React.Component {
     account: ""
   }
 
-  startTime = 1635654241699;
+  startTime = 1639713600000;
   account: any;
 
   connectWallet = async () => {
@@ -63,7 +63,7 @@ export default class App extends React.Component {
         </div>
 
         <div className="App">
-          <header className="App-header">The Eyescream Project</header>
+          <header className="App-header">The Eyescream Social</header>
 
           <div className="collection-preview">
             <img className="collection-preview-gif" src={EyeScreamPreviewGif}></img>
@@ -72,7 +72,7 @@ export default class App extends React.Component {
           <div className="about">
             Eyescream is a platform for collaborative creativity. Each token serves as a membership to our community... 
             granting members access to an exclusive club where they 
-            create, party, and change the world.
+            create, learn, network, and pioneer web3.
             <br></br><br></br>
             We're building a community to benefit the planet, and all of it's beautiful eyescream
             lovers.

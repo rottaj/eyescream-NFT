@@ -105,8 +105,10 @@
 }
 
 .swiper-slide-img {
-  height: 200%;
-  width: 200%;
+  height: 100%;
+  min-height: 20vh;
+  min-width: 20vh;
+  width: 100%;
 }
 
 .swiper-container {
@@ -181,7 +183,7 @@
   align-items: center;
   width: 12%;
   margin-left: 10%;
-  min-height: 12vh;
+  min-height: 12em;
 }
 
 /* --------- End of Countdown --------- */
@@ -195,6 +197,7 @@
 .roadmap-img {
   max-width: 100%;
   max-height: 100%;
+  min-height: 25em;
 }
 
 .road-map-and-info {

@@ -98,7 +98,7 @@ export default class App extends React.Component {
               effect={'coverflow'}
               className="swiper-container"
               grabCursor={true}
-              spaceBetween={200}
+              spaceBetween={10}
               slidesPerView={4}
               centeredSlides={true}
               onSlideChange={() => console.log("slide change", images[1])}

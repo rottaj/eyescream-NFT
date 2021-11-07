@@ -99,7 +99,7 @@ export default class App extends React.Component {
               className="swiper-container"
               grabCursor={true}
               spaceBetween={10}
-              slidesPerView={4}
+              slidesPerView={2}
               centeredSlides={true}
               onSlideChange={() => console.log("slide change", images[1])}
               onSwiper={swiper => console.log(swiper)}
@@ -128,7 +128,7 @@ export default class App extends React.Component {
             </Swiper>
           </div>
           <div className="road-map-and-info">
-            <img className="roadmap-img"src={Roadmap}></img>
+            {/*<img className="roadmap-img"src={Roadmap}></img>*/}
 
           </div>
           <h1 className="count-down-timer-h1">Countdown</h1>

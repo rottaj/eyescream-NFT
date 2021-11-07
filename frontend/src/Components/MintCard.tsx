@@ -56,7 +56,7 @@ export default class MintCard extends React.Component <Props>{
             console.log("SIGNER", signer)
             //signer._address = this.props.account;
             const contract = new ethers.Contract(contractAddress, _abi, signer);
-            await socket.emit("mint.token", {test: "testing"}, (response: any) => {
+            await socket.emit("mint.token", {tokenCount: e.target[0].value}, (response: any) => { // sends token count to node api
                 console.log("RESPONSE", response.filename)
                 this.socketCallBackMint(contract, e.target[0].value, response.filename)
             }) 

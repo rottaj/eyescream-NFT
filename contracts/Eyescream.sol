@@ -13,8 +13,10 @@ contract Eyescream is Ownable, ERC721URIStorage {
     
     uint256 public constant MAX_SUPPLY = 10101; // Total number of Eyescream tokens.
     uint256 public constant PRICE = 0.08 ether; 
-    uint256 public constant MAX_PER_TX = 3;
-    address private constant _owner = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
+    //uint256 public constant MAX_PER_TX = 3; // need to include quantity in mint function.
+    address private constant _t1 = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
+
+    event BaseTokenURIChanged(string baseTokenURI);
 
     constructor() ERC721("Eyescream", "EYE") {}
 
@@ -44,16 +46,28 @@ contract Eyescream is Ownable, ERC721URIStorage {
                 )
             );
     }
+    
 
-    function mint(string memory _svg) external payable{ 
-        require(_tokenCounter.current() < MAX_SUPPLY, "SOLD_OUT");
-        require(_tokenCounter.current() + 1 <= MAX_SUPPLY, "SOLD_OUT");
-        require(PRICE == msg.value, "INVALID_ETHER");   
-        string memory _imgURI = svgToUri(_svg);
+    function mint(string memory _svg) external payable {
+        require(_tokenCounter.current() < MAX_SUPPLY, "SOLD OUT");
+        require(_tokenCounter.current() + 1 <= MAX_SUPPLY, "SOLD OUT");
+        require(msg.value == PRICE, "PRICE LIMIT NOT REACHED");
+        string memory _imgURI = svgToURI(_svg);
         _safeMint(msg.sender, _tokenCounter.current());
         _setTokenURI(uint256(_tokenCounter.current()), createTokenURI(_imgURI));
         _tokenCounter.increment();
-        console.log("----------- Token minted ----------");
+        }
+    }
+
+
+    // Withdrawal function
+    function withDraw() external onlyOwner {
+        uint _t1Amount = address(this).balance;
+        require(payable(_t1).send(_t1Amount), "FAILED TO SEND TO T1");
+    }
+
+    function emergencyWithDraw() external onlyOwner {
+        payable(_t1).transfer(address(this).balance);
     }
 
 }

@@ -1,16 +1,24 @@
 pragma solidity ^0.8.0;
 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "base64-sol/base64.sol";
 import "hardhat/console.sol";
 
 contract Eyescream is Ownable, ERC721Enumerable{
-    
+    using Strings for uint256;    
     uint256 public constant MAX_SUPPLY = 10101; // Total number of Eyescream tokens.
     uint256 public constant PRICE = 0.08 ether; 
     uint256 public constant MAX_PER_TX = 3;
+
+    // Team addresses
     address private constant _t1 = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
+
+    string private _baseTokenURI;
+
+    // Events
+    event BaseTokenURIChanged(string URI);
 
     mapping (address => uint256) _totalClaimed;
 
@@ -37,6 +45,18 @@ contract Eyescream is Ownable, ERC721Enumerable{
 
     function emergencyWithDraw() external onlyOwner {
         payable(_t1).transfer(address(this).balance);
+    }
+
+    // URI Function
+
+    function setBaseTokenURI(string memory _uri) external onlyOwner {
+        _baseTokenURI = _uri;
+        emit BaseTokenURIChanged(_uri);
+    }
+
+    function tokenURI(uint256 _tokenId) public view override(ERC721) returns (string memory) {
+        require(_exists(_tokenId), "TOKEN DOESN'T EXIST");
+        return string(abi.encodePacked(_baseTokenURI, _tokenId.toString()));
     }
 
 

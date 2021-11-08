@@ -34,15 +34,12 @@ export default class MintCard extends React.Component <Props>{
         })
     }
 
-    async socketCallBackMint(contract: any, quantity: string, file: string) {
+    async socketCallBackMint(contract: any, filesArr: string) {
         console.log("CONTRACTDFOOOOBER", contract)
-        console.log("QUANTIIYYYFOOOBAR", typeof(quantity))
-        console.log("TESTINGFILELLSOOOBAR", file)
-        for (let i=0; i <= parseInt(quantity); i++) { // will replace eyescream_1 with next in line. (Removing recently minted token)
-            const tx = await contract.mint(file, {
-                value: ethers.utils.parseEther("0.08")
-            });
-        }
+        console.log("TESTINGFILELLSOOOBAR", filesArr)
+        const tx = await contract.mint(filesArr, {
+            value: ethers.utils.parseEther((0.08 * filesArr.length).toString())
+        });
     }
 
     async onSubmitMint(e: any) { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
@@ -58,7 +55,7 @@ export default class MintCard extends React.Component <Props>{
             const contract = new ethers.Contract(contractAddress, _abi, signer);
             await socket.emit("mint.token", {tokenCount: e.target[0].value}, (response: any) => { // sends token count to node api
                 console.log("RESPONSE", response.filename)
-                this.socketCallBackMint(contract, e.target[0].value, response.filename)
+                this.socketCallBackMint(contract, response.filesArr)
             }) 
 
         }

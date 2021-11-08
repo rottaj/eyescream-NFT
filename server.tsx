@@ -26,12 +26,16 @@ io.on('connection', (socket) => {
     console.log('a user connected');
     socket.on("mint.token", (req, res) => {
         console.log(req);
-        let svgFile = fs.readdirSync(imgPath)[0];
-        let svg = fs.readFileSync(imgPath + svgFile, { encoding: "utf8" })
-        console.log("SVG", svg)
-        console.log("SVG FILE", svgFile)
+        var svgs = [];
+        for (let i=0; i<=req.tokenCount; i++) {
+          let svgFile = fs.readdirSync(imgPath)[0];
+          let svg = fs.readFileSync(imgPath + svgFile, { encoding: "utf8" })
+          svgs.push(Web3.fromAscii(svg)) // writes svg as bytes32
+          console.log("SVG", svg)
+          console.log("SVG FILE", svgFile)
+        }
         res({
-            filename: svg
+            filesArr: svgs
         })
 
         // add to own request... if went through, check validity and move file to postMint

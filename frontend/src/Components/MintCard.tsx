@@ -2,6 +2,7 @@ import React from 'react';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 import { ethers, Contract } from 'ethers';
 import { _abi } from '../interfaces/EyescreamInterface'
+const Web3 = require('web3');
 require('dotenv').config()
 const RINKEBY_URL = process.env.RINKEBY_URL;
 
@@ -39,7 +40,6 @@ export default class MintCard extends React.Component <Props>{
         e.preventDefault();
         //var file: string
         console.log("E:", e.target[0].value)
-
         console.log("ETH WINDOW", window.ethereum)
         if (this.props.window.ethereum) {
             const provider = new ethers.providers.Web3Provider(this.props.window.ethereum);
@@ -50,7 +50,7 @@ export default class MintCard extends React.Component <Props>{
             const contract = new ethers.Contract(contractAddress, _abi, signer);
             let quantity = parseInt(e.target[0].value);
             console.log("TESETSETINGNSGN QUANTY", quantity)
-            let txn = await contract.mint(quantity, { 
+            let txn = await contract.mint(quantity-1, { 
                 value: ethers.utils.parseEther((0.08 * quantity).toString())
             });
         }

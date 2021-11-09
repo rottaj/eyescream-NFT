@@ -1,4 +1,4 @@
-export const _abi = [
+export const _abi =[
   {
     "inputs": [],
     "stateMutability": "nonpayable",
@@ -52,6 +52,19 @@ export const _abi = [
       }
     ],
     "name": "ApprovalForAll",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "URI",
+        "type": "string"
+      }
+    ],
+    "name": "BaseTokenURIChanged",
     "type": "event"
   },
   {
@@ -175,22 +188,10 @@ export const _abi = [
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_uri",
-        "type": "string"
-      }
-    ],
-    "name": "createTokenURI",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "pure",
+    "inputs": [],
+    "name": "emergencyWithDraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -239,9 +240,9 @@ export const _abi = [
   {
     "inputs": [
       {
-        "internalType": "string",
-        "name": "_svg",
-        "type": "string"
+        "internalType": "uint256",
+        "name": "_quantity",
+        "type": "uint256"
       }
     ],
     "name": "mint",
@@ -373,6 +374,19 @@ export const _abi = [
   {
     "inputs": [
       {
+        "internalType": "string",
+        "name": "_uri",
+        "type": "string"
+      }
+    ],
+    "name": "setBaseTokenURI",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes4",
         "name": "interfaceId",
         "type": "bytes4"
@@ -387,25 +401,6 @@ export const _abi = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_svg",
-        "type": "string"
-      }
-    ],
-    "name": "svgToUri",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -425,7 +420,50 @@ export const _abi = [
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "tokenId",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenOfOwnerByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
         "type": "uint256"
       }
     ],
@@ -442,7 +480,7 @@ export const _abi = [
   },
   {
     "inputs": [],
-    "name": "totalAmount",
+    "name": "totalSupply",
     "outputs": [
       {
         "internalType": "uint256",
@@ -485,6 +523,13 @@ export const _abi = [
       }
     ],
     "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withDraw",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

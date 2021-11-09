@@ -29,9 +29,7 @@ export default class MintCard extends React.Component <Props>{
     }
 
     componentDidMount() {
-        socket.on("connection", () => {
-            console.log("Connected to backend")            
-        })
+        console.log("i dont know what to do with you")
     }
 
     async socketCallBackMint(contract: any, filesArr: string) {
@@ -53,11 +51,9 @@ export default class MintCard extends React.Component <Props>{
             console.log("SIGNER", signer)
             //signer._address = this.props.account;
             const contract = new ethers.Contract(contractAddress, _abi, signer);
-            await socket.emit("mint.token", {tokenCount: e.target[0].value}, (response: any) => { // sends token count to node api
-                console.log("RESPONSE", response.filename)
-                this.socketCallBackMint(contract, response.filesArr)
-            }) 
-
+            const tx = await contract.mint(e.target[0].value, {
+                value: ethers.utils.parseEther((0.08 * e.target[0].value).toString())
+            });
         }
     }
 

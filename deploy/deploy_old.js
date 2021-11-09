@@ -7,20 +7,17 @@ const main = async () => {
     await eyeScreamContract.deployed();
     console.log("Contract deployed to:", eyeScreamContract.address);
 
-    let txn;
+    let filepath = "./img/preMint/1.svg" // will update every mint... removing previous img. ( All art will be generated before hand )
+    var svgs = [] // array of svg files ( will by passes as bytes32 )
+    let svg = fs.readFileSync(filepath, { encoding: "utf8" })
+    svgs.push(Web3.utils.asciiToHex(svg).padEnd(33, '0')) // convert svg file to bytes32 & push to svgs arr.
 
-    let baseTokenURI = "https://gateway.pinata.cloud/ipfs/QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV"
-    let quantity = 1
-    txn = await eyeScreamContract.mint(quantity, { // mints 2 tokens
-        value: ethers.utils.parseEther((0.08 * quantity).toString())
+    let txn;
+    txn = await eyeScreamContract.mint(1, { // mints 2 tokens
+        value: ethers.utils.parseEther((0.08 * svgs.length).toString())
     });
     await txn.wait();
-
     console.log("Minted");
-    txnTwo = await eyeScreamContract.setBaseTokenURI(baseTokenURI);
-    await txnTwo.wait();
-
-    console.log("Set Base Token!\n\n\n", txnTwo)
 };
 
 const runMain = async () => {

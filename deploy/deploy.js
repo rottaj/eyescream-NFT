@@ -9,7 +9,7 @@ const main = async () => {
 
     let txn;
 
-    let baseTokenURI = "https://gateway.pinata.cloud/ipfs/QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV"
+    let baseTokenURI = "ipfs://QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV/"
     let quantity = 1
     txn = await eyeScreamContract.mint(quantity, { // mints 2 tokens
         value: ethers.utils.parseEther((0.08 * quantity).toString())

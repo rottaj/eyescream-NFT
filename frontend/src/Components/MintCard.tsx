@@ -1,22 +1,17 @@
 import React from 'react';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
-import io from 'socket.io-client';
 import { ethers, Contract } from 'ethers';
 import { _abi } from '../interfaces/EyescreamInterface'
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
-const fs = require('fs');
 require('dotenv').config()
 const RINKEBY_URL = process.env.RINKEBY_URL;
-var socket = io("http://localhost:8080", {
-  withCredentials: false,
-})
+
 
 interface Props {
     window: any;
     //account:any;
 }
 
-var contractAddress = "0x499FC2172Ce411A91A1dd8c4b55A5f32CF51cF85";
+var contractAddress = "0xca4742b2e4100b27D71D54dd78754024DF9Ba503";
 
 
 
@@ -44,6 +39,8 @@ export default class MintCard extends React.Component <Props>{
         e.preventDefault();
         //var file: string
         console.log("E:", e.target[0].value)
+
+        console.log("ETH WINDOW", window.ethereum)
         if (this.props.window.ethereum) {
             const provider = new ethers.providers.Web3Provider(this.props.window.ethereum);
             const signer = await provider.getSigner();
@@ -51,8 +48,10 @@ export default class MintCard extends React.Component <Props>{
             console.log("SIGNER", signer)
             //signer._address = this.props.account;
             const contract = new ethers.Contract(contractAddress, _abi, signer);
-            const tx = await contract.mint(e.target[0].value, {
-                value: ethers.utils.parseEther((0.08 * e.target[0].value).toString())
+            let quantity = parseInt(e.target[0].value);
+            console.log("TESETSETINGNSGN QUANTY", quantity)
+            let txn = await contract.mint(quantity, { 
+                value: ethers.utils.parseEther((0.08 * quantity).toString())
             });
         }
     }

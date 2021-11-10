@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "base64-sol/base64.sol";
 import "hardhat/console.sol";
 
-contract Eyescream is Ownable, ERC721Enumerable{
+contract Eyescream is ERC721Enumerable, Ownable{
     using Strings for uint256;    
     uint256 public constant MAX_SUPPLY = 10101; // Total number of Eyescream tokens.
     uint256 public constant PRICE = 0.08 ether; 
@@ -16,8 +16,8 @@ contract Eyescream is Ownable, ERC721Enumerable{
     // Team addresses
     address private constant _t1 = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
 
-    string public _baseTokenURI;
-    string public _baseContractURI;
+    string private _baseTokenURI;
+    string private _baseContractURI;
 
 
     // Events

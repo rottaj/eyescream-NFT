@@ -12,7 +12,7 @@ interface Props {
     //account:any;
 }
 
-var contractAddress = "0x499eD7114045cD6A85D421eeF2D73fDA02D750dD";
+var contractAddress = "0xF8987d2B35B75a5487FbC455eF4F2647F60C533f";
 
 
 
@@ -26,14 +26,6 @@ export default class MintCard extends React.Component <Props>{
 
     componentDidMount() {
         console.log("i dont know what to do with you")
-    }
-
-    async socketCallBackMint(contract: any, filesArr: string) {
-        console.log("CONTRACTDFOOOOBER", contract)
-        console.log("TESTINGFILELLSOOOBAR", filesArr)
-        const tx = await contract.mint(filesArr, {
-            value: ethers.utils.parseEther((0.08 * filesArr.length).toString())
-        });
     }
 
     async onSubmitMint(e: any) { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
@@ -53,6 +45,7 @@ export default class MintCard extends React.Component <Props>{
             let txn = await contract.mint(quantity-1, { 
                 value: ethers.utils.parseEther((0.08 * quantity).toString())
             });
+            await txn.wait();
         }
     }
 

@@ -16,9 +16,11 @@ contract Eyescream is Ownable, ERC721Enumerable{
     address private constant _t1 = 0xB702DC679dCe8d27c77AC49A63B9A138B674929E;
 
     string private _baseTokenURI;
+    string private _baseContractURI;
 
     // Events
     event BaseTokenURIChanged(string URI);
+    event BaseContractURIChanged(string URI);
 
     mapping (address => uint256) _totalClaimed;
 
@@ -52,6 +54,11 @@ contract Eyescream is Ownable, ERC721Enumerable{
     function setBaseTokenURI(string memory _uri) external onlyOwner {
         _baseTokenURI = _uri;
         emit BaseTokenURIChanged(_uri);
+    }
+
+    function setBaseContractURI(string memory _uri) external onlyOwner {
+        _baseContractURI = _uri;
+        emit BaseContractURIChanged(_uri);
     }
 
     function tokenURI(uint256 _tokenId) public view override(ERC721) returns (string memory) {

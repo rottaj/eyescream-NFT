@@ -64,6 +64,19 @@ export const _abi =[
         "type": "string"
       }
     ],
+    "name": "BaseContractURIChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "URI",
+        "type": "string"
+      }
+    ],
     "name": "BaseTokenURIChanged",
     "type": "event"
   },
@@ -367,6 +380,19 @@ export const _abi =[
       }
     ],
     "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_uri",
+        "type": "string"
+      }
+    ],
+    "name": "setBaseContractURI",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

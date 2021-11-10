@@ -34,17 +34,17 @@ describe("Mint Token", function() {
   })
 })
 
-describe("Get Total Amount", function () {
+describe("Get Total Supply", function () {
   it("Should return total supply of tokens", async function () {
     const Eyescream = await ethers.getContractFactory("Eyescream");
     const eyescream = await Eyescream.deploy();
     await eyescream.deployed();
 
-    //let totalAmount = await eyescream.totalSupply();
-    let totalAmount = await eyescream.totalTokens();
+    let totalAmount = await eyescream.totalSupply();
+    //totalAmount +=1;
     //await totalAmount.wait();
     console.log("Total amount foobar", totalAmount)
-    console.log("Total Amount: ", totalAmount.toNumber())
+    console.log("Total Amount: ", parseInt(totalAmount))
 
   })
 })

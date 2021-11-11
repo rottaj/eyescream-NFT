@@ -14,6 +14,7 @@ import EyeScreamPreviewGif from "./images/eyescream_preview.gif";
 import Roadmap from "./images/roadmap.png";
 import MintCard from "./Components/MintCard";
 import CountDown from "./Components/CountDown";
+import TimeLine from './Components/TimeLine';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ethers, Contract } from 'ethers';
 import "swiper/swiper-bundle.min.css";
@@ -126,6 +127,9 @@ export default class App extends React.Component {
             <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[20].default}/></SwiperSlide>
 
             </Swiper>
+          </div>
+          <div className="roadmap-panel">
+            <TimeLine/>
           </div>
           <div className="road-map-and-info">
             {/*<img className="roadmap-img"src={Roadmap}></img>*/}

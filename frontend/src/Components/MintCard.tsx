@@ -12,7 +12,7 @@ interface Props {
     //account:any;
 }
 
-var contractAddress = "0xF8987d2B35B75a5487FbC455eF4F2647F60C533f";
+var contractAddress = "0x6DC1E6a688879bB293C80DF3711F3f3E6f87Cae1";
 
 
 

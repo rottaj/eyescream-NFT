@@ -12,7 +12,7 @@ interface Props {
     //account:any;
 }
 
-var contractAddress = "0x6DC1E6a688879bB293C80DF3711F3f3E6f87Cae1";
+var contractAddress = "0x05D79a33C0f7e719aE171b61f095F500635A0a21";
 
 
 
@@ -42,7 +42,7 @@ export default class MintCard extends React.Component <Props>{
             const contract = new ethers.Contract(contractAddress, _abi, signer);
             let quantity = parseInt(e.target[0].value);
             console.log("TESETSETINGNSGN QUANTY", quantity)
-            let txn = await contract.mint(quantity-1, { 
+            let txn = await contract.mint(quantity, { 
                 value: ethers.utils.parseEther((0.08 * quantity).toString())
             });
             await txn.wait();

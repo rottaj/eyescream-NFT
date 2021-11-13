@@ -8,7 +8,7 @@ export default class TimeLine extends React.Component {
         return (
             <div>
 
-                <VerticalTimeline>
+                <VerticalTimeline lineColor={"black"}>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -24,6 +24,7 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
+                        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         date="December 2022"
                         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         //icon={<WorkIcon />}
@@ -35,6 +36,7 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
+                        contentStyle={{ background: 'rgb(33, 218, 243)', color: '#fff' }}
                         date="January 1, 2022"
                         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         //icon={<WorkIcon />}
@@ -49,6 +51,7 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
+                        contentStyle={{ background: 'rgb(33, 218, 243)', color: '#fff' }}
                         date="March 2022"
                         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         //icon={<WorkIcon />}
@@ -60,6 +63,8 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
+
+                        contentStyle={{ background: 'rgb(33, 243, 205)', color: '#fff' }}
                         date="April 2022"
                         iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                         //icon={<SchoolIcon />}
@@ -72,6 +77,8 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
+
+                        contentStyle={{ background: 'rgb(33, 243, 205)', color: '#fff' }}
                         date="May 2022"
                         iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                         //icon={<SchoolIcon />}
@@ -84,6 +91,7 @@ export default class TimeLine extends React.Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--education"
+                        contentStyle={{ background: 'rgb(37, 243, 33)', color: '#fff' }}
                         date="June 2022"
                         iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                         //icon={<SchoolIcon />}

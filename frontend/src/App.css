@@ -65,6 +65,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   height: 90%;
+  max-width: 340px;
 }
 
 .App-header {
@@ -205,7 +206,14 @@
 
 
 .roadmap-panel {
+  background-image: url("./images/DripBackground.jpg");
   margin-top: 15%; 
+}
+
+.vertical-timeline-element-title {
+  font-family: retro-font;
+  color: black;
+  /*text-shadow: 3px 3px white; */
 }
 
 .roadmap-img {
@@ -297,6 +305,7 @@
   width: 100%;
   min-height: 5vh;
   padding-left: -5%;
+  padding-right: -90px;
 }
 
 .mint-card-total {
@@ -348,6 +357,7 @@
 .member-dev-2{
   display: inline-block;
   height: 34vh;
+  margin-top: 4%;
   margin-left: 6%;
   margin-right: 6%;
   min-width: 34vw;
@@ -356,12 +366,14 @@
 .member-boy{
   display: inline-block;
   height: 50vh;
+  margin-top: 4%;
   margin-left: 6%;
   margin-right: 6%;
   max-width: 50vh;
 }
 .member-artist{
   display: inline-block;
+  margin-top: 4%;
   height: 50vh;
   max-width: 50vh;
 }

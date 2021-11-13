@@ -13,6 +13,8 @@ module.exports = {
     rinkeby: {
       url: RINKEBY_URL,
       accounts: [PHRASE],
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
   },
   etherscan: {

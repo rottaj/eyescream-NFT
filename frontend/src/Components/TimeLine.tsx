@@ -1,12 +1,13 @@
 import React from 'react'
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 import 'react-vertical-timeline-component/style.min.css';
+import "./TimeLine.css";
 const { VerticalTimeline, VerticalTimelineElement }  = require('react-vertical-timeline-component');
 
 export default class TimeLine extends React.Component {
     render() {
         return (
-            <div>
+            <div className="TimeLine-Main">
 
                 <VerticalTimeline lineColor={"black"}>
                     <VerticalTimelineElement

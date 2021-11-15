@@ -1,0 +1,93 @@
+.mint-panel {
+    margin-top: 15%;
+    height: 100%;
+    min-width: 80%;
+    /*max-height: 300px; */
+    /*width: 100%; */
+  }
+  
+  .mint-header {
+    font-size: calc(50px + 2vmin);
+    font-family: retro-font;
+  }
+  
+  .mint-card {
+    border-style: solid;
+    height: 100%;
+    min-width: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+  }
+  
+  .mint-img {
+    height: 30%;
+    width: 30%;
+    
+    object-fit: cover;
+    flex-direction: row;
+    flex: 1;
+  }
+  
+  .current-price-h1 {
+    font-size: calc(75% + 2vmin);
+  }
+  
+  .mint-card-title {
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    flex-wrap: wrap;
+  }
+  
+  .mint-card-eyescream-info {
+    margin-top: 7%;
+    flex: 1;
+    margin-left: 25%;
+    align-items: left;
+    font-size: calc(20% + 2vmin);
+  }
+  
+  .mint-card-eyescream {
+    width: 100%;
+    display: flex;
+    flex-direction: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .mint-card-button-buy {
+    width: 100%;
+    margin-top: 2%;
+    min-height: 5vh;
+  }
+  
+  .mint-form-token-amount {
+    width: 100%;
+    min-height: 5vh;
+    padding-left: -5%;
+    padding-right: -90px;
+  }
+  
+  .mint-card-total {
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total-h3 {
+    margin-top: 5%;
+    align-items: center;
+    font-size: calc(5px + 2vmin);
+  }
+  .mint-card-total-price-h1 {
+    margin-left: 30%;
+    display: inline-block;
+    font-size: calc(100% + 2vmin);
+  }
+  

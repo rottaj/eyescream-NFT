@@ -1,0 +1,35 @@
+.CollectionPage-Main {
+    margin-top: -500px;
+    text-align: center;
+    background-color: rgb(52, 235, 229);
+    /*background-color: linear-gradient(rgb(66, 209, 245), rgb(66, 245, 221))*/
+}
+
+.drip-background-banner{
+    object-fit: cover;
+    width: 200px;
+}
+
+.swiper-slide {
+    background-color: rgb(52, 235, 229);
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-slide-img {
+    height: 100%;
+    max-height: 55vh;
+    max-width: 55vh;
+    min-height: 30vh;
+    min-width: 30vh;
+    width: 100%;
+  }
+  
+  .swiper-container {
+    margin-top: 5%; 
+    width: 100%;
+  }
+  

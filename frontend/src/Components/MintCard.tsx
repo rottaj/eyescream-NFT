@@ -2,6 +2,7 @@ import React from 'react';
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 import { ethers, Contract } from 'ethers';
 import { _abi } from '../interfaces/EyescreamInterface'
+import "./MintCard.css";
 const Web3 = require('web3');
 require('dotenv').config()
 const RINKEBY_URL = process.env.RINKEBY_URL;

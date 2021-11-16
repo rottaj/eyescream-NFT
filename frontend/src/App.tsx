@@ -4,6 +4,8 @@ import CollectionPage from './Components/CollectionPage';
 import AboutPage from "./Components/AboutPage";
 import TimeLine from "./Components/TimeLine";
 import MintCard from "./Components/MintCard";
+import TeamPage from './Components/TeamPage';
+import BottomNavBar from "./Components/BottomNavBar";
 import { ethers, Contract } from "ethers";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
@@ -41,6 +43,8 @@ export default class App extends React.Component {
                 <AboutPage/>
                 <TimeLine/>
                 <MintCard window={window}/>
+                <TeamPage/>
+                <BottomNavBar/>
             </div>
         )
     }

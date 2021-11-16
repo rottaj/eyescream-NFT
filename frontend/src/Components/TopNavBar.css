@@ -1,5 +1,28 @@
 .top-nav-bar {
+    font-family: 'Shrikhand';
     width: 100%;
     height: 15%;
-    border-style: solid;
+    display: inline-block;
+}
+
+.top-nav-bar-h2 {
+    display: inline-block;
+    font-family: 'Shrikhand';
+}
+
+.connect-wallet-button {
+    display: inline-block;
+    margin: auto;
+    margin-top: 1.5%;
+    margin-right: 10%;
+    float: right;
+
+    background-color: rgb(239, 66, 245); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

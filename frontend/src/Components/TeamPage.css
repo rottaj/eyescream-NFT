@@ -1,15 +1,50 @@
 .TeamPage-Main {
+    font-family: 'Shrikhand';
     text-align: center;
     margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 6%;
     background-color: rgb(235, 52, 235);
 }
 
+.h1-signature-flavors {
+    font-size: 425%
+}
+
+.Team-Container {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
 .Phyllis-token {
-    height: 15%;
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
     width: 15%;
+    min-width: 200px;
+    -moz-border-radius: 50px; /* or 50% */
+    border-radius: 50px; /* or 50% */
 }
 
 .Ahawk-token {
-    height: 15%;
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
     width: 15%;
+    min-width: 200px;
+    -moz-border-radius: 50px; /* or 50% */
+    border-radius: 50px; /* or 50% */
+}
+
+.eyescream-token {
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
+    width: 11.3%;
+    min-width: 200px;
+    -moz-border-radius: 50px; /* or 50% */
+    border-radius: 50px; /* or 50% */
+}
+
+.Team-Bio {
 }

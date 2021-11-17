@@ -12,19 +12,42 @@
     padding-top: 5%;
     padding-bottom: 5%;
     align-items: center;
-    border-style: solid;
+    border-color: green;
     padding-left: 5%;
     padding-right: 5%;
 }
 
+
+.AboutCard-h2 {
+    color: yellow;
+}
+
+.AboutCard-h5 {
+    color: white;
+    font-weight: bold;
+}
+
+.AboutCard-h4 {
+    color: white;
+    font-weight: lighter;
+}
+
 .AboutCard-Child {
-    background-color: rgb(52, 216, 235);
+    /*
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;
+    */
+    background-color: rgb(52, 119, 235);
     text-align: left;
     padding-top: 9%;
     padding-bottom: 15%;
     padding-right: 5%;
-
     padding-left: 5%;
     border-style: solid;
+    border-color: yellow;
+    border-width: 8px;
+    outline: 8px solid blue;
 }
+
 

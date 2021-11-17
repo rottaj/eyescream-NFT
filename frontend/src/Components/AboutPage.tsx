@@ -7,9 +7,9 @@ export default class AboutPage extends React.Component {
             <div className="AboutPage-Main">
                 <div className="AboutCard-Main">
                     <div className="AboutCard-Child">
-                        <h2>EYESCREAM</h2>
-                        <h5>ALLOWS YOU TO COLLABORATE AND CONNECT WITH OTHER CREATORS.</h5>
-
+                        <h2 className="AboutCard-h2">EYESCREAM</h2>
+                        <h3 className="AboutCard-h5">ALLOWS YOU TO COLLABORATE AND CONNECT WITH OTHER CREATORS.</h3>
+                        <h4 className="AboutCard-h4">
                         EACH TOKEN PROVIDES ACCESS TO OUR EXCLUSIVE COMMUNITY WHERE MEMBERS CAN COLLABORATE, CREATE, LEARN, NETWORK, AND
                         PIONEER WEB3.
                         <br></br><br></br>
@@ -18,7 +18,7 @@ export default class AboutPage extends React.Component {
                         WE BELIEVE THAT MAKING INTRODUCING FRESH PERSPECTIVES AND NEW TECHNIQUES ALLOWS PEOPLE TO EVOLVE AND GROW AS A COMMUNITY.
                         <br></br><br></br>
                         IT TAKES TIME TO BUILD SOMETHING THAT'S WORTH BUILDING.
-
+                        </h4>
                     </div>
                 </div>
             </div>

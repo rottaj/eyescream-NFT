@@ -1,17 +1,18 @@
 .CollectionPage-Main {
-    margin-top: -500px;
     text-align: center;
-    background-color: rgb(52, 235, 229);
+    position: relative;
+    background-color: green;
     /*background-color: linear-gradient(rgb(66, 209, 245), rgb(66, 245, 221))*/
 }
 
-.drip-background-banner{
+.drip-background-banner {
     object-fit: cover;
     width: 200px;
 }
 
 .swiper-slide {
-    background-color: rgb(52, 235, 229);
+    /*background: rgb(52, 235, 229); */
+    background: green;
     position: relative;
     display: block;
     height: 100%;

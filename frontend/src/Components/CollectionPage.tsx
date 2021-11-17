@@ -18,7 +18,6 @@ export default function CollectionPage () {
         const swiperRef = React.useRef<SwiperCore>();
         const onInit = (Swiper: SwiperCore): void => {
             swiperRef.current = Swiper;
-            console.log(swiperRef.current)
         };
         const handleMouseEnter = () => {
             if (swiperRef.current) swiperRef.current.autoplay.stop();

@@ -23,6 +23,7 @@ export default class CollectionPage extends React.Component {
                 grabCursor={true}
                 spaceBetween={4}
                 slidesPerView={3}
+                autoplay={{delay: 1000}}
                 centeredSlides={true}
                 onSlideChange={() => console.log("slide change", images[1])}
                 onSwiper={swiper => console.log(swiper)}

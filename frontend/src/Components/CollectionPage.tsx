@@ -2,6 +2,7 @@ import React, { useRef }from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DripBackground from "../images/DripBackgroundBanner.png";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+import "./CollectionPage.css";
 SwiperCore.use([Autoplay, EffectCoverflow, Pagination])
 
 function importAll(r:any) {
@@ -27,8 +28,8 @@ export default function CollectionPage () {
           };
 
         return (
-            <div className="CollectionPage-Main" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <img className="drip-background-banner" src={DripBackground} />
+            <div className="CollectionPage-Main" /*onMouseEnter={handleMouseEnter} */onMouseLeave={handleMouseLeave}>
+                <img className="drip-background-banner" src={DripBackground} /> 
                 <Swiper
                 onInit={onInit}
                 effect={'coverflow'}
@@ -38,7 +39,7 @@ export default function CollectionPage () {
                 slidesPerView={3}
                 autoplay={{delay: 1000 }}
                 centeredSlides={true}
-                onSlideChange={() => console.log("slide change", images[1])}
+                /*onSlideChange={() => console.log("slide change", images[1])} */
                 onSwiper={swiper => console.log(swiper.autoplay.start())}
                 >
                     <SwiperSlide className="swiper-slide"><img className="swiper-slide-img"src={images[0].default}/></SwiperSlide>

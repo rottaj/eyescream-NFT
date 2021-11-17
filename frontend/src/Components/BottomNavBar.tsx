@@ -5,7 +5,7 @@ export default class BottomNavBar extends React.Component {
     render() {
         return (
             <div>
-                <img src={DripBackgroundBanner} /> 
+                <img src={DripBackgroundBanner} className="DripBannerBottom"/> 
             </div>
         )
     }

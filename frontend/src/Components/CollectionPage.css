@@ -1,23 +1,24 @@
 .CollectionPage-Main {
-    text-align: center;
-    position: relative;
-    background-color: green;
-    /*background-color: linear-gradient(rgb(66, 209, 245), rgb(66, 245, 221))*/
+  padding-bottom: 10%;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(rgb(66, 209, 245), rgb(66, 245, 221))
 }
 
 .drip-background-banner {
     object-fit: cover;
-    width: 200px;
+    width: 100%;
+    margin-top: -1%;
 }
 
 .swiper-slide {
     /*background: rgb(52, 235, 229); */
-    background: green;
     position: relative;
     display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
+
   }
   
   .swiper-slide-img {
@@ -27,10 +28,13 @@
     min-height: 30vh;
     min-width: 30vh;
     width: 100%;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
   }
   
   .swiper-container {
-    margin-top: 5%; 
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 100%;
   }
   

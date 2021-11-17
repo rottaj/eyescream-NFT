@@ -4,11 +4,13 @@
     margin-top: 15%;
     padding-top: 5%;
     padding-bottom: 6%;
-    background-color: rgb(235, 52, 235);
+    background-color: rgb(235, 122, 227);
 }
 
 .h1-signature-flavors {
-    font-size: 425%
+    font-size: 425%;
+    color: white;
+    text-shadow: 5px 5px yellow;
 }
 
 .Team-Container {

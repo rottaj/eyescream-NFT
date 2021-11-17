@@ -1,9 +1,62 @@
 import React from 'react'
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 import 'react-vertical-timeline-component/style.min.css';
+import { Bounce } from 'react-awesome-reveal';
 import "./TimeLine.css";
 const { VerticalTimeline, VerticalTimelineElement }  = require('react-vertical-timeline-component');
 
+
+
+export default class TimeLine extends React.Component {
+    render() {
+        return (
+            <div className="TimeLine-Main">
+                <Bounce className="TimeLine-Card">
+                    <div>
+                        <h1> Stage 1 </h1>
+                        <h3>Premint</h3>
+                    </div>
+                </Bounce>
+                <Bounce className="TimeLine-Card">
+                    <div>
+                        <h1> Stage 2 </h1>
+                        <h3>Public Sale + Merch Drop</h3>
+                    </div>
+                </Bounce>
+
+                <Bounce className="TimeLine-Card">
+                    <div>
+                        <h1> Stage 3 </h1>
+                        <h3>New Years Party + Scavenger Hunt</h3>
+                    </div>
+                </Bounce>
+
+                <Bounce className="TimeLine-Card">
+                    <div>
+                        <h1> Stage 4 </h1>
+                        <h3>Website v2 Launch + New Charity Donation</h3>
+                    </div>
+                </Bounce>
+
+                <Bounce className="TimeLine-Card">
+                    <div>
+                    <h1> Stage 5 </h1>
+                    <h3>?????</h3>
+                    </div>
+                </Bounce>
+
+                <Bounce className="TimeLine-Card">
+                    <div>
+                    <h1> Stage 6 </h1>
+                    <h3>?????</h3>
+                    </div>
+                </Bounce>
+            </div>
+        )
+    }
+}
+
+/*
 export default class TimeLine extends React.Component {
     render() {
         return (
@@ -112,3 +165,5 @@ export default class TimeLine extends React.Component {
         )
     }
 }
+
+*/

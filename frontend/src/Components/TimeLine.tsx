@@ -11,6 +11,7 @@ export default class TimeLine extends React.Component {
     render() {
         return (
             <div className="TimeLine-Main">
+                <h1 className="Roadmap-h1">Roadmap v1</h1>
                 <Bounce className="TimeLine-Card">
                     <div>
                         <h1> Stage 1 </h1>
@@ -48,7 +49,7 @@ export default class TimeLine extends React.Component {
                 <Bounce className="TimeLine-Card">
                     <div>
                     <h1> Stage 6 </h1>
-                    <h3>?????</h3>
+                    <h3>Roadmap V2 + ?????</h3>
                     </div>
                 </Bounce>
             </div>

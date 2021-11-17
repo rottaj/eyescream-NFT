@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef }from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DripBackground from "../images/DripBackgroundBanner.png";
-import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
-SwiperCore.use([EffectCoverflow, Pagination])
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+SwiperCore.use([Autoplay, EffectCoverflow, Pagination])
 
 function importAll(r:any) {
   return r.keys().map(r);
@@ -12,21 +12,34 @@ function importAll(r:any) {
 const images = importAll(require.context('../images/collection_slider', false, /\.(png|jpe?g|svg)$/));
 
 
-export default class CollectionPage extends React.Component {
-    render() {
+export default function CollectionPage () {
+
+        const swiperRef = React.useRef<SwiperCore>();
+        const onInit = (Swiper: SwiperCore): void => {
+            swiperRef.current = Swiper;
+            console.log(swiperRef.current)
+        };
+        const handleMouseEnter = () => {
+            if (swiperRef.current) swiperRef.current.autoplay.stop();
+          };
+          const handleMouseLeave = () => {
+            if (swiperRef.current) swiperRef.current.autoplay.start();
+          };
+
         return (
-            <div className="CollectionPage-Main">
+            <div className="CollectionPage-Main" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <img className="drip-background-banner" src={DripBackground} />
                 <Swiper
+                onInit={onInit}
                 effect={'coverflow'}
                 className="swiper-container"
                 grabCursor={true}
                 spaceBetween={4}
                 slidesPerView={3}
-                autoplay={{delay: 1000}}
+                autoplay={{delay: 1000 }}
                 centeredSlides={true}
                 onSlideChange={() => console.log("slide change", images[1])}
-                onSwiper={swiper => console.log(swiper)}
+                onSwiper={swiper => console.log(swiper.autoplay.start())}
                 >
                     <SwiperSlide className="swiper-slide"><img className="swiper-slide-img"src={images[0].default}/></SwiperSlide>
                     <SwiperSlide className="swiper-slide"><img className="swiper-slide-img" src={images[1].default}/></SwiperSlide>
@@ -54,4 +67,3 @@ export default class CollectionPage extends React.Component {
             </div>
         )
     }
-}

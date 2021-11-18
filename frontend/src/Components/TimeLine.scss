@@ -1,6 +1,5 @@
 .Roadmap-h1 {
     font-family: 'Shrikhand';
-    font-size: 400%;
 
 }
 
@@ -25,7 +24,7 @@
     font-family: 'Shrikhand';
     margin: 10%;
     font-size: 200%;
-    border-style: solid;
+    border-bottom: 3px solid black;
     -moz-border-radius: 15px; /* or 50% */
     border-radius: 15px; /* or 50% */
 
@@ -66,7 +65,7 @@ $root: '.c-rainbow';
     &__layer {
         --text-color: var(--color-foreground);
         counter-increment: rainbow; 
-        font-size: 6rem;
+        font-size: 8vw;
         color: var(--text-color);
     
         text-shadow:

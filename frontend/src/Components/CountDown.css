@@ -14,27 +14,40 @@
   margin-left: 20%;
 }
 
-.count-down-card {
-
-}
-
 .count-down-card-time-container {
-  padding-top: 10%;
   width: 60%;
-  min-height: 300px;
   display: flex;
   justify-content: center;
 
+}
 
+.count-down-container-days {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.count-down-container-hours {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.count-down-container-minutes {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.count-down-container-seconds {
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .count-down-panel-days {
   /*background-image: url("./images/DripBackground.jpg"); */
   order: 1;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  border-style: solid;
   width: 12%;
   min-height: 12vh;
   height: 50%;
@@ -46,14 +59,14 @@
   -webkit-border-bottom-right-radius: 75px;
   -webkit-border-bottom-left-radius: 75px;
   -webkit-transform:rotate(45deg);
-  box-shadow: 1px 1px 7px #1a1a1a;
+
+  box-shadow: 1px 1px 7px  rgb(248, 145, 255);
 }
 
 .count-down-panel-hours {
   /*background-image: url("./images/DripBackground.jpg"); */
   order: 2;
   display: flex;
-  border-style: solid;
   justify-content: center;
   align-items: center;
   margin-left: 6%;
@@ -68,14 +81,13 @@
   -webkit-border-bottom-right-radius: 75px;
   -webkit-border-bottom-left-radius: 75px;
   -webkit-transform:rotate(45deg);
-  box-shadow: 1px 1px 7px #1a1a1a;
+  box-shadow: 1px 1px 7px rgb(248, 145, 255);
 }
 
 .count-down-panel-minutes {
   /* background-image: url("./images/DripBackground.jpg"); */
   order: 3;
   display: flex;
-  border-style: solid;
   justify-content: center;
   align-items: center;
   width: 12%;
@@ -90,7 +102,7 @@
   -webkit-border-bottom-right-radius: 75px;
   -webkit-border-bottom-left-radius: 75px;
   -webkit-transform:rotate(45deg);
-  box-shadow: 1px 1px 7px #1a1a1a;
+  box-shadow: 1px 1px 7px rgb(248, 145, 255);
 }
 
 
@@ -99,7 +111,6 @@
   /*background-image: url("./images/DripBackground.jpg"); */
   order: 4;
   display: flex;
-  border-style: solid;
   justify-content: center;
   align-items: center;
   width: 12%;
@@ -114,12 +125,10 @@
   -webkit-border-bottom-right-radius: 75px;
   -webkit-border-bottom-left-radius: 75px;
   -webkit-transform:rotate(45deg);
-  box-shadow: 1px 1px 7px #1a1a1a;
+  box-shadow: 1px 1px 7px rgb(248, 145, 255);
 }
 
 .liquid-drop {
-  display: inline-block;
-  transform: rotate(-70);
 }
 
 @keyframes fade-in {
@@ -147,16 +156,14 @@
   }
 }
 
-.drops {
+.drops { /* adjust position, margin-top, right */
+  position: absolute;
   -webkit-filter: url('#liquid');
   filter: url('#liquid');
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
   z-index: 1;
   opacity: 0;
   animation: fade-in .1s linear .4s forwards;
+  margin-left: 4%;
 }
 
 .drop1 , .drop2 {
@@ -168,12 +175,13 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: #10a7c1
-  /*background-color: rgb(248, 145, 255) */
+  /*background-color: #10a7c1; */
+  margin-left: 15%;
+  background-color: rgb(248, 145, 255)
 }
 
 .drop1 {
-  width: 90px;
+  width: 30px;
   height: 16px;
   bottom: 2px;
   border-radius: 0;

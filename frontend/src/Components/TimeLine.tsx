@@ -22,7 +22,7 @@ export default class TimeLine extends React.Component {
                     <li className="c-rainbow__layer c-rainbow__layer--yellow">ROADMAP V1</li>
                 </ul>
                 </div>
-                <div>
+                <div className="TimeLine-Card-Container">
                 <Bounce className="TimeLine-Card">
                     <div>
                         <h1> Stage 1 </h1>

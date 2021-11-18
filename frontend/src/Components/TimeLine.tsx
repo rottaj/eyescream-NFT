@@ -2,7 +2,7 @@ import React from 'react'
 import EyeScreamPreview from "../images/eyescreamscoop.jpg";
 import 'react-vertical-timeline-component/style.min.css';
 import { Bounce } from 'react-awesome-reveal';
-import "./TimeLine.css";
+import "./TimeLine.scss";
 const { VerticalTimeline, VerticalTimelineElement }  = require('react-vertical-timeline-component');
 
 
@@ -11,7 +11,18 @@ export default class TimeLine extends React.Component {
     render() {
         return (
             <div className="TimeLine-Main">
-                <h1 className="Roadmap-h1">Roadmap v1</h1>
+                <div className="TimeLine-Header-Rainbow">
+                    <ul className="c-rainbow">
+                    <li className="c-rainbow__layer c-rainbow__layer--white">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--orange">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--red">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--violet">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--blue">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--green">ROADMAP V1</li>
+                    <li className="c-rainbow__layer c-rainbow__layer--yellow">ROADMAP V1</li>
+                </ul>
+                </div>
+                <div>
                 <Bounce className="TimeLine-Card">
                     <div>
                         <h1> Stage 1 </h1>
@@ -52,6 +63,7 @@ export default class TimeLine extends React.Component {
                     <h3>Roadmap V2 + ?????</h3>
                     </div>
                 </Bounce>
+                </div>
             </div>
         )
     }

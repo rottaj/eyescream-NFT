@@ -8,55 +8,77 @@
 
 .count-down-panel {
   width: 100%;
+  min-height: 300px;
   margin-top: 5%;
+  margin-bottom: 10%;
+  align-items: center;
+  margin-left: 20%;
+}
+
+.count-down-card {
+  
+}
+
+.count-down-card-time-container {
+  padding-top: 10%;
+  width: 60%;
+  min-height: 300px;
   display: flex;
-  flex-direction: stretch;
   justify-content: center;
+  border-style: solid;
 }
 
 .count-down-panel-days {
-  background-image: url("./images/DripBackground.jpg");
-  
+  /*background-image: url("./images/DripBackground.jpg"); */
+ 
+  order: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   border-style: solid;
   width: 12%;
   min-height: 12vh;
+  height: 50%;
 }
 
 .count-down-panel-hours {
-  background-image: url("./images/DripBackground.jpg");
+  /*background-image: url("./images/DripBackground.jpg"); */
+  order: 2;
   display: flex;
   border-style: solid;
   justify-content: center;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 6%;
   width: 12%;
   min-height: 12vh;
+  height: 50%;
 }
 
 .count-down-panel-minutes {
-  background-image: url("./images/DripBackground.jpg");
+  /* background-image: url("./images/DripBackground.jpg"); */
+  order: 3;
   display: flex;
   border-style: solid;
   justify-content: center;
   align-items: center;
   width: 12%;
-  margin-left: 10%;
+  margin-left: 6%;
   min-height: 12vh;
+  height: 50%;
 }
 
 
 
 .count-down-panel-seconds {
-  background-image: url("./images/DripBackground.jpg");
+  /*background-image: url("./images/DripBackground.jpg"); */
+  order: 4;
   display: flex;
   border-style: solid;
   justify-content: center;
   align-items: center;
   width: 12%;
-  margin-left: 10%;
-  min-height: 12em;
+  margin-left: 6%;
+  min-height: 12vh;
+  height: 50%;
 }
 

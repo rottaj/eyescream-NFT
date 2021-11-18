@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./CountDown.css";
 interface Props {
     startTime: number
 }
@@ -60,17 +60,21 @@ class CountDown extends React.Component<Props, State, Interval> {
     render() {
         return (
             <div className="count-down-panel">
-                <div className="count-down-panel-days">
-                    <h1>{this.state.days}</h1>
+                <div className="count-down-card">
+                <div className="count-down-card-time-container">
+                    <div className="count-down-panel-days">
+                        <h1>{this.state.days}</h1>
+                    </div>
+                    <div className="count-down-panel-hours">
+                        <h1>{this.state.hours}</h1>
+                    </div>
+                    <div className="count-down-panel-minutes">
+                        <h1>{this.state.minutes}</h1>
+                    </div>
+                    <div className="count-down-panel-seconds">
+                        <h1>{this.state.seconds}</h1>
+                    </div>
                 </div>
-                <div className="count-down-panel-hours">
-                    <h1>{this.state.hours}</h1>
-                </div>
-                <div className="count-down-panel-minutes">
-                    <h1>{this.state.minutes}</h1>
-                </div>
-                <div className="count-down-panel-seconds">
-                    <h1>{this.state.seconds}</h1>
                 </div>
             </div>
         )

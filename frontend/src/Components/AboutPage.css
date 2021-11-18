@@ -47,6 +47,8 @@
     border-color: yellow;
     border-width: 8px;
     outline: 8px solid blue;
+    -moz-border-radius: 15px; /* or 50% */
+    border-radius: 15px; /* or 50% */
 }
 
 

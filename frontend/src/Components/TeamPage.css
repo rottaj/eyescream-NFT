@@ -24,8 +24,8 @@
     display: inline-block;
     width: 15%;
     min-width: 200px;
-    -moz-border-radius: 50px; /* or 50% */
-    border-radius: 50px; /* or 50% */
+    -moz-border-radius: 100px; /* or 50% */
+    border-radius: 100px; /* or 50% */
 }
 
 .Ahawk-token {
@@ -34,18 +34,18 @@
     display: inline-block;
     width: 15%;
     min-width: 200px;
-    -moz-border-radius: 50px; /* or 50% */
-    border-radius: 50px; /* or 50% */
+    -moz-border-radius: 100px; /* or 50% */
+    border-radius: 100px; /* or 50% */
 }
 
 .eyescream-token {
     padding: 10px;
     margin: auto;
     display: inline-block;
-    width: 11.3%;
-    min-width: 200px;
-    -moz-border-radius: 50px; /* or 50% */
-    border-radius: 50px; /* or 50% */
+    width: 13%;
+    min-width: 100px;
+    -moz-border-radius: 100px; /* or 50% */
+    border-radius: 100px; /* or 50% */
 }
 
 .Team-Bio {

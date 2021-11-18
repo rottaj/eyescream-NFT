@@ -3,6 +3,7 @@ import TopNavBar from "./Components/TopNavBar";
 import CollectionPage from './Components/CollectionPage';
 import AboutPage from "./Components/AboutPage";
 import TimeLine from "./Components/TimeLine";
+import CountDown from "./Components/CountDown";
 import MintCard from "./Components/MintCard";
 import TeamPage from './Components/TeamPage';
 import BottomNavBar from "./Components/BottomNavBar";
@@ -42,6 +43,7 @@ export default class App extends React.Component {
                 <CollectionPage/>
                 <AboutPage/>
                 <TimeLine/>
+                <CountDown startTime={this.startTime}/>
                 <MintCard window={window}/>
                 <TeamPage/>
                 <BottomNavBar/>

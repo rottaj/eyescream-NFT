@@ -2,13 +2,14 @@
     font-family: 'Shrikhand';
     width: 100%;
     height: 15%;
+
+    max-height: 50x;
     display: inline-block;
 }
 
 .top-nav-bar-h2 {
     display: inline-block;
     font-family: 'Shrikhand';
-    word-wrap: break-word;
     padding-left: 5%;
     line-height: 96%;
     width: 10%;

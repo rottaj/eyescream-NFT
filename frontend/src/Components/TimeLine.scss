@@ -14,7 +14,7 @@
 */
 .TimeLine-Header-Rainbow {
     margin-top: 3%;
-    margin-left: 25%;
+    margin-left: 20%;
  
     font-family: var(--font-name);
 }
@@ -65,7 +65,7 @@ $root: '.c-rainbow';
     &__layer {
         --text-color: var(--color-foreground);
         counter-increment: rainbow; 
-        font-size: 8vw;
+        font-size: calc(18px + 8vw);
         color: var(--text-color);
     
         text-shadow:

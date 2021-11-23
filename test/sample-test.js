@@ -54,6 +54,26 @@ describe("Get Total Supply", function () {
   })
 })
 
+
+
+describe("Withdraw", function () {
+  it("Should withdrawl ethereum to owner account", async function () {
+    const Eyescream = await ethers.getContractFactory("Eyescream");
+    const eyescream = await Eyescream.deploy();
+    await eyescream.deployed();
+    let quantity = 2;
+    txn = await eyescream.mint(quantity, {
+      value: ethers.utils.parseEther((0.08 * quantity).toString())
+    });
+    await txn.wait();
+
+    const withdrawTxn = await eyescream.withDraw();
+    await withdrawTxn;
+    console.log(withdrawTxn);
+  })
+})
+
+/*
 describe("GetTokenURI", function () {
   it("Should return token URI based on _tokenId", async function (done) {
     const Eyescream = await ethers.getContractFactory("Eyescream");
@@ -76,3 +96,4 @@ describe("GetTokenURI", function () {
     console.log("Test TOKEN URI", tokenURI)
   })
 })
+*/

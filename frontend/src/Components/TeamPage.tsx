@@ -12,9 +12,11 @@ export default class TeamPage extends React.Component {
                 <div className="Team-Container">
                     <img className="Phyllis-token" src={PhyllisToken} />
                     <img className="Ahawk-token" src={AhawkToken} />
+                    {/*
                     <img className="eyescream-token" src={EyescreamScoop} />
                     <img className="eyescream-token" src={EyescreamScoop} />
                     <img className="eyescream-token" src={EyescreamScoop} />
+                    */}
                 </div>
             </div>
         )

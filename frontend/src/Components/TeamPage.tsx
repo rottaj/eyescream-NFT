@@ -11,8 +11,9 @@ export default class TeamPage extends React.Component {
                 <h1 className="h1-signature-flavors">Signature Flavors</h1>
                 <div className="Team-Container">
                     <img className="Phyllis-token" src={PhyllisToken} />
-                    <img className="Ahawk-token" src={AhawkToken} />
                     {/*
+
+                    <img className="Ahawk-token" src={AhawkToken} />
                     <img className="eyescream-token" src={EyescreamScoop} />
                     <img className="eyescream-token" src={EyescreamScoop} />
                     <img className="eyescream-token" src={EyescreamScoop} />

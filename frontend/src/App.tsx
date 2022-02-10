@@ -39,7 +39,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="main-container">
-                <TopNavBar window={window}/>
+                <TopNavBar/>
                 <CollectionPage/>
                 <AboutPage/>
                 <TimeLine/>

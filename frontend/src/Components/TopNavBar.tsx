@@ -3,35 +3,28 @@ import { ethers } from "ethers";
 import "./TopNavBar.css";
 
 
+declare let window: any;
+const TopNavBar = () => {
 
-interface Props {
-    window: any;
-    //account:any;
-}
+      const connectWallet = async () => {
 
+        const handleAccount = async () => {
+          var accounts = await window.ethereum.send('eth_requestAccounts');
+          await window.ethereum.enable();
+        }
 
-export default class TopNavBar extends React.Component <Props>{
-
-      connectWallet = async () => {
         if(window.ethereum) {
-          var accounts = await this.props.window.ethereum.send('eth_requestAccounts');
-          await this.props.window.ethereum.enable();
-    
-          const provider = new ethers.providers.Web3Provider(window.ethereum);
-          const signer = provider.getSigner();
-          console.log("SIGNERAPPPFOOOOO", signer)
-          //this.setState({account: accounts.result[0]})
-          //console.log("STATE ACCOUNT", this.state.account)
+          handleAccount();
         }
       }
     
 
-    render() {
-        return (
-            <div className="top-nav-bar">
-                <h2 className="top-nav-bar-h2">The Eyescream Social</h2>
-                <button className="connect-wallet-button"  onClick={() => this.connectWallet()}>Connect Wallet</button>
-            </div>
-        )
-    }
+      return (
+          <div className="top-nav-bar">
+              <h2 className="top-nav-bar-h2">The Eyescream Social</h2>
+              <button className="connect-wallet-button"  onClick={() => connectWallet()}>Connect Wallet</button>
+          </div>
+      )
 }
+
+export default TopNavBar;

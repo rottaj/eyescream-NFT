@@ -13,7 +13,7 @@ function importAll(r:any) {
 const images = importAll(require.context('../images/collection_slider', false, /\.(png|jpe?g|svg)$/));
 
 
-export default function CollectionPage () {
+const CollectionPage = () => {
 
         const swiperRef = React.useRef<SwiperCore>();
         const onInit = (Swiper: SwiperCore): void => {
@@ -67,3 +67,5 @@ export default function CollectionPage () {
             </div>
         )
     }
+  
+    export default CollectionPage;

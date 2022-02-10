@@ -32,7 +32,7 @@ const main = async () => {
 
     //let baseTokenURI = "ipfs://QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV/" 
     //let baseTokenURI = "https://gateway.pinata.cloud/ipfs/QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV/";
-    let baseTokenURI = "https://ipfs.io/ipfs/QmP512euiCH9zbuqcV6ddD3pisNpE4Eogxhw78PA3wL3LE/"
+    let baseTokenURI = "https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens/"
 
     txnBaseContractURI = await eyeScreamContract.setBaseContractURI(JSON.stringify(baseContractURI));
     await txnBaseContractURI.wait();
@@ -45,7 +45,7 @@ const main = async () => {
 
     let quantity = 1
     txn = await eyeScreamContract.mint(quantity, { // mints 2 tokens
-        value: ethers.utils.parseEther((0.08 * quantity).toString())
+        value: ethers.utils.parseEther((0.03 * quantity).toString())
     });
     await txn.wait();
 

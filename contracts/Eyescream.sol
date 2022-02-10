@@ -11,7 +11,7 @@ contract Eyescream is ERC721Enumerable, Ownable{
     using Counters for Counters.Counter;
     using Strings for uint256;    
     uint256 public constant MAX_SUPPLY = 10101; // Total number of Eyescream tokens.
-    uint256 public constant PRICE = 0.00 ether; 
+    uint256 public constant PRICE = 0.03 ether; 
     uint256 public constant MAX_PER_TX = 3;
 
     // Team addresses
@@ -28,7 +28,7 @@ contract Eyescream is ERC721Enumerable, Ownable{
 
     mapping (address => uint256) _totalClaimed;
 
-    constructor() ERC721("Eyescream_One", "EYE") {}
+    constructor() ERC721("Bored Ape Fake Club", "BAYF") {}
 
     function mint(uint256 _quantity) external payable {
         //require(totalSupply() < MAX_SUPPLY, "SOLD OUT");

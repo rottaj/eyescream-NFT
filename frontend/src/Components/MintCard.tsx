@@ -11,12 +11,12 @@ interface Props {
     window: any;
 }
 
-var contractAddress = "0x5A9F025d93549961f6086d1b344BBEd0E9650A96";
+var contractAddress = "0x040887a839DEA07014E82b2A4b4fA3d7e754b9BA";
 
 const MintCard = (props: Props) => {
 
     const [coins, setCoins] = useState(1);
-    const [amountEth, setAmountEth] = useState(0.00);
+    const [amountEth, setAmountEth] = useState(0.03);
 
     const onSubmitMint = async (e: any) => { // maybe call on external function? How do we store 10k images?  Dividing images into subfolders is prob best bet.
         e.preventDefault();
@@ -27,7 +27,7 @@ const MintCard = (props: Props) => {
             const contract = new ethers.Contract(contractAddress, _abi, signer);
             let quantity = parseInt(e.target[0].value);
             let txn = await contract.mint(quantity, { 
-                value: ethers.utils.parseEther((0.00 * quantity).toString())
+                value: ethers.utils.parseEther((0.03 * quantity).toString())
             });
             await txn.wait();
         }
@@ -37,7 +37,7 @@ const MintCard = (props: Props) => {
     const onChangeCalculateTotal = (e: React.ChangeEvent<HTMLInputElement>) => {
         let tokenNum = parseInt(e.target.value) || 0;
         if (tokenNum > 5) { tokenNum = 5 }
-        let amount = tokenNum * 0.00
+        let amount = tokenNum * 0.03
         setCoins(tokenNum);
         setAmountEth(amount);
     }
@@ -51,7 +51,7 @@ const MintCard = (props: Props) => {
                 <img src={EyeScreamPreview} className="mint-img"></img>
                 <div className="mint-card-eyescream-info">
                     <h3 className="current-price-h3">Current Price</h3>
-                    <h1 className="current-price-h1">0.00 ETH Each</h1>
+                    <h1 className="current-price-h1">0.03 ETH Each</h1>
                     <h3>10,101/10,101 remain</h3>
                 </div>
             </div>

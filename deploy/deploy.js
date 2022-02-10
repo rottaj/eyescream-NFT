@@ -32,7 +32,7 @@ const main = async () => {
 
     //let baseTokenURI = "ipfs://QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV/" 
     //let baseTokenURI = "https://gateway.pinata.cloud/ipfs/QmVLNbza4eacsAL7rYjoSwPxS8wF6n2kjEmK76NhDZiZGV/";
-    let baseTokenURI = "https://ipfs.io/ipfs/QmZ3meNjquhFnBGhtMNjzgFeSDR7vmmxhcEEjGk3X2QbqJ/"
+    let baseTokenURI = "https://ipfs.io/ipfs/QmP512euiCH9zbuqcV6ddD3pisNpE4Eogxhw78PA3wL3LE/"
 
     txnBaseContractURI = await eyeScreamContract.setBaseContractURI(JSON.stringify(baseContractURI));
     await txnBaseContractURI.wait();

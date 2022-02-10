@@ -5,7 +5,7 @@ require('hardhat-deploy');
 require('dotenv').config()
 const RINKEBY_URL = process.env.RINKEBY_URL;
 const PHRASE = process.env.PHRASE
-const ETHERSCAN_API = process.env.ETHERSCAN_API;
+//const ETHERSCAN_API = process.env.ETHERSCAN_API;
 
 module.exports = {
   solidity: '0.8.4',
@@ -18,6 +18,6 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: ETHERSCAN_API
+    //apiKey: ETHERSCAN_API
   },
 };
